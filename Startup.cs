@@ -77,38 +77,11 @@ namespace reactnet3
                 app.UseHsts();
             }
 
-            // app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
 
             app.UseRouting();
-
-        string[] args = System.Environment.GetCommandLineArgs();
-
-    if (args.Length > 1 && args[1] == "force_dbupdate")
-
-    {
-
-        using (var scope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
-
-        {
-
-            var context = scope.ServiceProvider.GetRequiredService<ThreedContext>();
-
-            var controller = new ThreedController(context);
-
-            controller.DeleteData();
-
-        }
-
-
-
-
-        // Exit the application after executing the delete-data command
-
-        // return;
-
-    }
 
             // app.UseAuthentication();
             // app.UseIdentityServer();

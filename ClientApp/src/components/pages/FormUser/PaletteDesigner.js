@@ -13613,7 +13613,10 @@ class PaletteDesignerPage extends Component {
                       let { t } = this.props;
 
                       toast.error(t('thecaseoutliniesexceedtheworkingarea'), { autoClose: 3000, position: toast.POSITION.TOP_CENTER });
-                      prePosXValue = 0;
+
+                      let newMapValue = this.map(((WorkingAreaYpos + WorkingArealength) - (this.state.CasesXYfotGreenRectPRC[NrValue - 1].y + h)), 0, -35.19, 0, 222);
+                      prePosXValue = Math.floor(newMapValue);
+                      // prePosXValue = 0;
                       x_negCheckbox = false;
                     }
                   }
@@ -13678,7 +13681,11 @@ class PaletteDesignerPage extends Component {
                       let { t } = this.props;
 
                       toast.error(t('thecaseoutliniesexceedtheworkingarea'), { autoClose: 3000, position: toast.POSITION.TOP_CENTER });
-                      prePosYValue = 0;
+                      
+                      let newMapValue = this.map(((WorkingAreaXpos) - (this.state.CasesXYfotGreenRectPRC[NrValue - 1].x)), 0, 35.21, 0, 222);
+                      prePosYValue = Math.floor(newMapValue);
+
+                      // prePosYValue = 0;
                       y_negCheckbox = false;
 
                     }
@@ -13688,7 +13695,11 @@ class PaletteDesignerPage extends Component {
 
                     if ((xPos + w) > (WorkingAreaXpos + WorkingAreawidth)) {
                       toast.error(t('thecaseoutliniesexceedtheworkingarea'), { autoClose: 3000, position: toast.POSITION.TOP_CENTER });
-                      prePosYValue = 0;
+                      
+                      let newMapValue = this.map(((WorkingAreaXpos + WorkingAreawidth) - (this.state.CasesXYfotGreenRectPRC[NrValue - 1].x + w)), 0, 35.19, 0, 222);
+                      prePosYValue = Math.floor(newMapValue);
+
+                      // prePosYValue = 0;
                       y_negCheckbox = false;
 
                     }
@@ -14215,33 +14226,63 @@ class PaletteDesignerPage extends Component {
 
         if ((this.autoGenerateCasePositionsDistance.length - 1) >= index) { // condition to select possible cases only
           if ((this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].y - this.map(this.setpreposx, 0, 1400, 0, 222)) < WorkingAreaYpos) {
-            tempPre_Pos_X = 0;
+           
+            let newMapValue = this.map(((WorkingAreaYpos) - (this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].y)), 0, -35.21, 0, 222);
+            tempPre_Pos_X = Math.floor(newMapValue);
+
+            // tempPre_Pos_X = 0;
+            console.log("............ If condition = 1 tempPre_Pos_X = ",tempPre_Pos_X);
             //
             temp_offset_X_neg = false;
             // temp_offset_Y_neg = false;
           }
           // console.log("checking this.map(this.setpreposx, 0, 1400, 0, 222)::::: ", ((this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].x + this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].w) + this.map(this.setpreposy, 0, 1400, 0, 222)) > (WorkingAreaXpos + WorkingAreawidth))
           if ((this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].x - this.map(this.setpreposy, 0, 1400, 0, 222)) < WorkingAreaXpos) {
-            tempPre_Pos_Y = 0;
+            
+            let newMapValue = this.map(((WorkingAreaXpos + WorkingAreawidth) - (this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].x + (this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].w))), 0, 35.21, 0, 222);
+            tempPre_Pos_Y = Math.floor(newMapValue);
+            
+            // tempPre_Pos_Y = 0;
+            console.log("............ If condition = 2 tempPre_Pos_X = ",tempPre_Pos_Y);
             //
             // temp_offset_X_neg = false;
             temp_offset_Y_neg = false;
           }
           if (((this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].x + this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].w) + this.map(this.setpreposy, 0, 1400, 0, 222)) > (WorkingAreaXpos + WorkingAreawidth)) {
-            tempPre_Pos_Y = 0;
+            
+            let newMapValue = this.map(((WorkingAreaXpos + WorkingAreawidth) - (this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].x + (this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].w))), 0, 35.19, 0, 222);
+            tempPre_Pos_Y = Math.floor(newMapValue);
+            
+            // tempPre_Pos_Y = 0;
+            console.log("............ If condition = 3 tempPre_Pos_X = ",tempPre_Pos_Y);
             //
             // temp_offset_X_neg = false;
             temp_offset_Y_neg = false;
           }
 
           if (((this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].y + this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].h) + this.map(this.setpreposx, 0, 1400, 0, 222)) > (WorkingAreaYpos + WorkingArealength)) {
-            tempPre_Pos_X = 0;
+            
+            let newMapValue = this.map(((WorkingAreaYpos) - (this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].y)), 0, -35.19, 0, 222);
+            tempPre_Pos_X = Math.floor(newMapValue);
+
+            // tempPre_Pos_X = 0;
+            console.log("............ If condition = 4 tempPre_Pos_X = ",tempPre_Pos_X, "this.setpreposx = ",this.setpreposx);
             //
             temp_offset_X_neg = false;
             // temp_offset_Y_neg = false;
           }
+          if(this.setpreposx > 0 && this.setpreposx < this.map(((WorkingAreaYpos) - (this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].y)), 0, -35.19, 0, 222)){
 
+            tempPre_Pos_X = this.setpreposx;
+            console.log("Inside ABCD IF tempPre_Pos_X ",tempPre_Pos_X);
+          }
+          else if(this.setpreposx > 0 && this.setpreposx > this.map(((WorkingAreaYpos) - (this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].y)), 0, -35.19, 0, 222)){
 
+            tempPre_Pos_X = Math.floor(this.map(((WorkingAreaYpos) - (this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].y)), 0, -35.19, 0, 222));
+            console.log("Inside ABCD Else IF tempPre_Pos_X ",tempPre_Pos_X);
+          }
+          
+          
         } else {
           tempPre_Pos_X = 0;
           tempPre_Pos_Y = 0;
@@ -15025,7 +15066,11 @@ class PaletteDesignerPage extends Component {
 
                 if ((yPos) < (WorkingAreaYpos)) {
                   toast.error(t('thecaseoutliniesexceedtheworkingarea'), { autoClose: 3000, position: toast.POSITION.TOP_CENTER });
-                  offset_X_neg = 0;
+
+                  let newMapValue = this.map(((WorkingAreaYpos) - (this.state.CasesXYfotGreenRectPRC[NrValue - 1].y)), 0, -35.21, 0, 222);
+                  offset_X_neg = Math.floor(newMapValue);
+
+                  // offset_X_neg = 0;
                   valuetruefalse = false;
                 }
 
@@ -15035,7 +15080,11 @@ class PaletteDesignerPage extends Component {
 
                 if ((yPos + h) > (WorkingAreaYpos + WorkingArealength)) {
                   toast.error(t('thecaseoutliniesexceedtheworkingarea'), { autoClose: 3000, position: toast.POSITION.TOP_CENTER });
-                  offset_X_neg = 0;
+
+                  let newMapValue = this.map(((WorkingAreaYpos + WorkingArealength) - (this.state.CasesXYfotGreenRectPRC[NrValue - 1].y + h)), 0, -35.19, 0, 222);
+                  offset_X_neg = Math.floor(newMapValue);
+
+                  // offset_X_neg = 0;
                   valuetruefalse = false;
                 }
               }
@@ -15096,7 +15145,11 @@ class PaletteDesignerPage extends Component {
 
 
                   toast.error(t('thecaseoutliniesexceedtheworkingarea'), { autoClose: 3000, position: toast.POSITION.TOP_CENTER });
-                  offset_Y_neg = 0;
+
+                  let newMapValue = this.map(((WorkingAreaXpos + WorkingAreawidth) - (this.state.CasesXYfotGreenRectPRC[NrValue - 1].x + w)), 0, 35.19, 0, 222);
+                  offset_Y_neg = Math.floor(newMapValue);
+
+                  // offset_Y_neg = 0;
                   value_Y_True_False = false;
 
                 }
@@ -15107,7 +15160,11 @@ class PaletteDesignerPage extends Component {
                   let { t } = this.props;
 
                   toast.error(t('thecaseoutliniesexceedtheworkingarea'), { autoClose: 3000, position: toast.POSITION.TOP_CENTER });
-                  offset_Y_neg = 0;
+
+                  let newMapValue = this.map(((WorkingAreaXpos) - (this.state.CasesXYfotGreenRectPRC[NrValue - 1].x)), 0, 35.21, 0, 222);
+                  offset_Y_neg = Math.floor(newMapValue);
+                  
+                  // offset_Y_neg = 0;
                   value_Y_True_False = false;
 
                 }

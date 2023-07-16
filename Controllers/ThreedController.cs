@@ -133,40 +133,7 @@ namespace reactnet3.Controllers
             var admindata = await _context.PalletDesigns.Where(x=>x.PalletId == id).FirstOrDefaultAsync();
             return Ok(admindata);
         }
-           [HttpPost("force_dbupdate")]
-        public IActionResult DeleteData()
-        {
-            try
-            {
-
-                _context.Threeds.RemoveRange(_context.Threeds);
-                _context.LayerCreators.RemoveRange(_context.LayerCreators);
-                _context.ProgramRoutineCreaters.RemoveRange(_context.ProgramRoutineCreaters);
-
-                var recordsToExclude = _context.PalletDesigns.FirstOrDefault(x => x.PalletId == 462);
-                if (recordsToExclude != null)
-                {
-                    _context.PalletDesigns.RemoveRange(_context.PalletDesigns.Where(x => x.PalletId != 462));
-                    _context.PalletDesigns.Attach(recordsToExclude); 
-                    // _context.LayerCreators.Attach(recordsToExclude);
-                    _context.Entry(recordsToExclude).State = EntityState.Modified; 
-                }
-            else
-                {
-                    _context.PalletDesigns.RemoveRange(_context.PalletDesigns);
-                
-                }
-
-                _context.SaveChanges();
-                Console.WriteLine("Db refreshed successfully!");
-                return Ok("Data deleted successfully!");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"An error occurred while deleting data: {ex.Message}");
-                return StatusCode(500, "An error occurred while deleting data.");
-            }
-        }
+           
 
         [HttpGet("getpdf")]
         public IActionResult GetProcessedFile()
