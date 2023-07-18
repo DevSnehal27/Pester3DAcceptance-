@@ -66,7 +66,7 @@ const CaseData = ({
                 <ExpansionPanelDetails>
                     <Grid container style={containerGridstyle} >
                         <Grid item xs={12} style={GridItemStyle}>
-                            <TextField style={{ height: "27px", bottom: "2.5px",  width: "43%",}}
+                            {/* <TextField style={{ height: "27px", bottom: "2.5px",  width: "43%",}}
                                 id="outlined-read-only-input"
                                 label=""
                                 defaultValue={t('width')}
@@ -79,7 +79,14 @@ const CaseData = ({
                                 }}
                                 variant="standard"
                                 size="small"
-                            />
+                            /> */}
+                            <div style={{ height: "27px", userSelect: "none", draggable: "false", marginTop: "12px", marginLeft: "2px", width: "43%", }}>
+                                <span
+                                    style={{ height: "27px", userSelect: "none", draggable: "false", marginTop: "12px", marginLeft: "10px", fontSize: "12px", width: "43%", }}
+                                >
+                                    {t('width')}
+                                </span>
+                            </div>
                             {/* <div style={{ color: '#7e1b1e', marginBottom: '0px', padding: "2px", marginTop: "4px", width:"90px", height:"90px" }} className="arrow" >
                           <ArrowRightAltIcon id="trending-flaticon" sx={{fontsize:90}} />
                         </div> */}
@@ -113,7 +120,7 @@ const CaseData = ({
                                 label=""
                                 defaultValue="mm"
                                 className={classes.textField1}
-                                margin="dense" style={{ height: "27px", left: "64px", width: "40px", bottom: "-6px"}}
+                                margin="dense" style={{ height: "27px", left: "64px", width: "40px", bottom: "-6px", userSelect: "none", draggable: "false", }}
                                 InputProps={{
                                     readOnly: true,
                                     maxLength: 2,
@@ -125,7 +132,7 @@ const CaseData = ({
                             />
                         </Grid>
                         <Grid item xs={12} style={GridItemStyle}>
-                        <TextField style={{ height: "27px", bottom: "2.5px",  width: "43%",}}
+                            {/* <TextField style={{ height: "27px", bottom: "2.5px", width: "43%", }}
                                 id="outlined-read-only-input"
                                 label=""
                                 defaultValue={t('length')}
@@ -138,7 +145,15 @@ const CaseData = ({
                                 }}
                                 variant="standard"
                                 size="small"
-                            />
+                            /> */}
+
+                            <div style={{ height: "27px", userSelect: "none", draggable: "false", marginTop: "12px", marginLeft: "2px", width: "43%", }}>
+                                <span
+                                    style={{ height: "27px", userSelect: "none", draggable: "false", marginTop: "12px", marginLeft: "10px", fontSize: "12px", width: "43%", }}
+                                >
+                                    {t('length')}
+                                </span>
+                            </div>
                             {/* <div style={{ color: 'green', marginBottom: '0px', padding: "2px", marginTop: "4px" }} className="arrow" >
                           <TrendingFlatIcon  sx={{fontsize:90}} id="trending-flaticon" />
                         </div> */}
@@ -172,7 +187,7 @@ const CaseData = ({
                                 label=""
                                 defaultValue="mm"
                                 className={classes.textField1}
-                                margin="dense" style={{ height: "27px", left: "64px", width: "40px", bottom: "-6px"}}
+                                margin="dense" style={{ height: "27px", left: "64px", width: "40px", bottom: "-6px", userSelect: "none", draggable: "false", }}
                                 InputProps={{
                                     readOnly: true,
                                     maxLength: 2,
@@ -184,7 +199,7 @@ const CaseData = ({
                             />
                         </Grid>
                         <Grid item xs={12} style={GridItemStyle}>
-                        <TextField style={{ height: "27px", bottom: "2.5px",  width: "43%",}}
+                            {/* <TextField style={{ height: "27px", bottom: "2.5px", width: "43%", }}
                                 id="outlined-read-only-input"
                                 label=""
                                 defaultValue={t('height')}
@@ -197,7 +212,14 @@ const CaseData = ({
                                 }}
                                 variant="standard"
                                 size="small"
-                            />
+                            /> */}
+                            <div style={{ height: "27px", userSelect: "none", draggable: "false", marginTop: "12px", marginLeft: "2px", width: "43%", }}>
+                                <span
+                                    style={{ height: "27px", userSelect: "none", draggable: "false", marginTop: "12px", marginLeft: "10px", fontSize: "12px", width: "43%", }}
+                                >
+                                    {t('height')}
+                                </span>
+                            </div>
                             {/* <div style={{ color: 'blue', marginBottom: '0px', padding: "2px", marginTop: "4px" }} className="arrow" >
                           <TrendingFlatIcon id="trending-flaticon" />
                         </div> */}
@@ -231,7 +253,7 @@ const CaseData = ({
                                 label=""
                                 defaultValue="mm"
                                 className={classes.textField1}
-                                margin="dense" style={{ height: "27px", left: "64px", width: "40px", bottom: "-6px"}}
+                                margin="dense" style={{ height: "27px", left: "64px", width: "40px", bottom: "-6px", userSelect: "none", draggable: "false", }}
                                 InputProps={{
                                     readOnly: true,
                                     maxLength: 2,
@@ -244,7 +266,7 @@ const CaseData = ({
                         </Grid>
 
                         <Grid item xs={12} style={GridItemStyle}>
-                            <TextField style={{ height: "27px", bottom: "4px", LeftTextflied, width: "43%", }}
+                            {/* <TextField style={{ height: "27px", bottom: "4px", LeftTextflied, width: "43%", }}
                                 id="outlined-read-only-input"
                                 label=""
                                 defaultValue={t('Mass')}
@@ -257,10 +279,17 @@ const CaseData = ({
                                 }}
                                 variant="standard"
                                 size="small"
-                            />
-                                {console.log("s_mass value = " + S_mass)}
+                            /> */}
+                             <div style={{ height: "27px", userSelect: "none", draggable: "false", marginTop: "12px", marginLeft: "2px", width: "43%", }}>
+                                <span
+                                    style={{ height: "27px", userSelect: "none", draggable: "false", marginTop: "12px", marginLeft: "10px", fontSize: "12px", width: "43%", }}
+                                >
+                                    {t('Mass')}
+                                </span>
+                            </div>
+                            {console.log("s_mass value = " + S_mass)}
 
-                            <TextField style={{ border: "1px solid white !important", backgroundColor: "white", width: "143px", height: "27px", left: "77px", top: "3px", }}
+                            <TextField style={{ border: "1px solid white !important", backgroundColor: "white", width: "143px", height: "27px", left: "75px", top: "3px", }}
                                 id="masspa"
                                 label=""
                                 error={S_errorMass}
@@ -299,7 +328,7 @@ const CaseData = ({
                             />
                         </Grid>
                         <Grid item xs={12} style={{ display: 'flex', flexDirection: 'row', padding: 0, width: "100%", height: "48px", marginBottom: "4px", backgroundColor: color1 }}>
-                            <TextField style={{ height: "27px", bottom: "5px", LeftTextflied, width: "43%", textAlign: "center", alignItems: "center" }}
+                            {/* <TextField style={{ height: "27px", bottom: "5px", LeftTextflied, width: "43%", textAlign: "center", alignItems: "center" }}
                                 id="outlined-read-only-input"
                                 label=""
                                 defaultValue={t('Material')}
@@ -312,10 +341,17 @@ const CaseData = ({
                                 }}
                                 variant="standard"
                                 size="small"
-                            />
+                            /> */}
+                             <div style={{ height: "27px", userSelect: "none", draggable: "false", marginTop: "12px", marginLeft: "2px", width: "43%", }}>
+                                <span
+                                    style={{ height: "27px", userSelect: "none", draggable: "false", marginTop: "12px", marginLeft: "10px", fontSize: "12px", width: "43%", }}
+                                >
+                                    {t('Material')}
+                                </span>
+                            </div>
                             <TextField
                                 id="outlined-typeMaterial"
-                                style={{ border: "1px solid white !important", top: "3px", Bottom: "1px", width: "42.9%", left: "6px",height: "27px", backgroundColor:"white", paddingLeft:"4px" }}
+                                style={{ border: "1px solid white !important", top: "3px", Bottom: "1px", width: "42.9%", left: "9px", height: "27px", backgroundColor: "white", paddingLeft: "4px" }}
                                 value={!S_showcaseTexture ? "Texture1" : S_showcaseTexture}
                                 onChange={handleChangeForTexture}
                                 onBlur={materialForDatabase}

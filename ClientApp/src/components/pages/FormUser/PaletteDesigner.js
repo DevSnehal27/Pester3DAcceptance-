@@ -4024,7 +4024,7 @@ class PaletteDesignerPage extends Component {
       toast.error(t('pleasespecifyaSchemawithatleastonecasefirst'), { autoClose: 5000, position: toast.POSITION.TOP_CENTER });
       this.state.panelname = ""
     }
-    if ((name == "panel5" || name == "panel4") && (this.state.setVariantName_SchemaA == "" && this.state.setVariantName_SchemaB == "" && this.state.setVariantName_SchemaC == "")) {
+    if ((name == "panel5" || name == "panel4" || name == "panel6" || name == "panel7") && (this.state.setVariantName_SchemaA == "" && this.state.setVariantName_SchemaB == "" && this.state.setVariantName_SchemaC == "")) {
 
       let { t } = this.props;
       toast.error(t('pleaseselectaPalletinParameterfirst'), { autoClose: 5000, position: toast.POSITION.TOP_CENTER });

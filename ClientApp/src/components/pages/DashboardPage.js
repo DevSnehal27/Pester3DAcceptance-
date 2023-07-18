@@ -1179,10 +1179,15 @@ class DashboardPage extends React.Component {
       palletnames: this.palletnames,
     });
     let palname = "";
-    if (palletsTemp1.length > 0) {
+    if (palletsTemp1.length > 0 && this.state.role=="admin") {
       this.state.selectpallet = palletsTemp1[0].id;
       palname = palletsTemp1[0].value;
-    } else {
+    }
+    else if (palletsTemp1.length > 0 && this.state.role=="regular") {
+      this.state.selectpallet = this.palletnames[1]?.id ?? null;
+      palname = palletsTemp1[1]?.value ??null;
+    }
+    else {
       this.state.selectpallet = "";
       palname = "";
     }
@@ -1466,27 +1471,18 @@ class DashboardPage extends React.Component {
     let { t } = this.props;
     let PalletRowsTemp = [];
     const pltid = this.state.selectpallet;
-    // let response = await axios.get("Threed/getPallet/" + pltid + "/" + 1);
-    // console.log("response downloadFilePallet " + response.data);
-
+  
     var layerdate1 = await this.getLayer(pltid);
     console.log("response 1" + layerdate1);
-
-    // let response1 = await axios.get("Threed/getPallet/" + pltid + "/" + 1 );
-    // console.log("response downloadFilePallet " + response1.data)
-
-    // if(pallet_no == 1){
-    //   this.pallets[index].working_area_2_Width_X_Direction = false,
-    //   this.pallets[index].working_area_2_Length_Y_Direction = false,
-    //   this.pallets[index].working_area_2_Offset_X_Direction = false,
-    //   this.pallets[index].working_area_2_Offset_Y_Direction = false;
-    // }
 
     var casedate1 = await this.getPRC(pltid);
     console.log("response 2 " + casedate1);
 
-    console.log("this.pallets 1 " + JSON.stringify(this.pallets));
+    let records=[]
+    let response = await axios.get(`/Threed/getPallets`);
+    records = response.data;
     try {
+      this.pallets=records
       this.pallets.map((val, index) => {
         // console.log(val)
         if (this.state.role === "admin" || this.state.role === "regular")

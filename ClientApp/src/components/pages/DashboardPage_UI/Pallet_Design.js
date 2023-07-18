@@ -347,7 +347,7 @@ const PalletDesign = ({
                                     label={
                                         <Box
                                             component="div"
-                                            style={{ width: "110px", fontSize: "12px !important", marginTop: "12px", marginLeft: "-14px", marginBottom: "10px", lineHeight: "1", lineBreak: "auto", }}
+                                            style={{ width: "110px", fontSize: "12px !important",userSelect: "none", marginTop: "12px", marginLeft: "-14px", marginBottom: "10px", lineHeight: "1", lineBreak: "auto", }}
                                             fontsize={12}
                                         >
                                             {t("editPallet")}
@@ -372,7 +372,7 @@ const PalletDesign = ({
                                     label={
                                         <Box
                                             component="div"
-                                            style={{ width: "100px", fontSize: "12px !important", marginTop: "11px", marginLeft: "13px", lineBreak: "auto", lineHeight: "1", marginBottom: "9px" }}
+                                            style={{ width: "100px", fontSize: "12px !important",userSelect: "none", marginTop: "11px", marginLeft: "13px", lineBreak: "auto", lineHeight: "1", marginBottom: "9px" }}
                                             fontsize={12}
                                         >
                                             {t("deletePallet")}
@@ -408,7 +408,7 @@ const PalletDesign = ({
                                     label={
                                         <Box
                                             component="div"
-                                            style={{ width: "129px", fontSize: "12px !important", marginTop: "7px", marginLeft: "21px", marginBottom: "4px", lineBreak: "auto", lineHeight: 1, }}
+                                            style={{ width: "129px", fontSize: "12px !important",userSelect: "none", marginTop: "7px", marginLeft: "21px", marginBottom: "4px", lineBreak: "auto", lineHeight: 1, }}
                                             fontsize={12}
                                         >
                                             {t("exportPalletData")}

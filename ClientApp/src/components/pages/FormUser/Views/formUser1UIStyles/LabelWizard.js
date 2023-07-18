@@ -91,52 +91,59 @@ const LabelWizard = ({
           <ExpansionPanelDetails>
           <Grid container style={containerGridstyle} >
 
-              <Grid item xs={12} style={GridItemStyle}>
-                <TextField style={{ height: "27px", bottom: "3px",LeftTextflied, left: "1px", width: "43%", }}
-                  id="outlined-read-only-input"
-                  label=""
-                  defaultValue={t('AddLabel')}
-                  className={classes.textField}
-                  margin="dense"
-                  InputProps={{
-                    readOnly: true,
-                    disableUnderline: true,
-                    style:   inputPropsStyle2
-                  }}
-                  variant="standard"
-                  size="small"
-                />
-                <TextField
-                  style={{ border: "1px solid white !important", backgroundColor: "white", width: "42.9%", height: "27px", top: "3px", bottom: "3px", left: "9px" }}
-                  error={labelNameLength === 0 ? true : false}
-                        helperText={S_errorText}
-                  id="outlined-text0"
-                  // label={t('labelName')}
-                        value={S_labelname}
-                        onChange={handleTextChange("labelname")}
-                  // onBlur={this.addMUILabel}
-                  inputProps={{ maxLength: 32 }}
-                  type="text"
-                  className={classes.textField1}
-                  InputLabelProps={{ shrink: true, style: { fontSize: 12, top: "3px" } }}
-                  InputProps={{
-                    style: { fontSize: 12, top: "3px" }
-                  }}
-                  margin="dense"
-                  variant="outlined"
-                  size="small"
-                />
-                <RadioGroup
-                  name="source"
-                        value={S_operation}
-                        onChange={e => executeUserAction(e.target.value)}
-                  row
+            <Grid item xs={12} style={GridItemStyle}>
+              {/* <TextField style={{ height: "27px", userSelect: "none", draggable: "false", bottom: "3px", LeftTextflied, left: "1px", width: "43%", }}
+                id="outlined-read-only-inputprrt22"
+                label=""
+                defaultValue={t('AddLabel')}
+                className={classes.textField}
+                margin="dense"
+                InputProps={{
+                  readOnly: true,
+                  disableUnderline: true,
+                  style: inputPropsStyle2
+                }}
+                variant="standard"
+                size="small"
+              /> */}
+              <div style={{height: "27px", userSelect: "none", draggable: "false", marginTop:"12px",marginLeft:"2px", width: "43%",}}>
+                <span
+                  style={{height: "27px", userSelect: "none", draggable: "false",marginTop:"12px",marginLeft:"10px", fontSize:"12px",  width: "43%",}}
                 >
-                  <FormControlLabel
-                    margin="dense" style={{ height: "18px", width: "18px", }}
-                    control={<Radio style={{ left: "3px", top: "15px", width: "18px", height: "18px" }} />}
-                    labelPlacement="start"
-                    onClick={addMUILabel}
+                  {t('AddLabel')}
+                </span>
+              </div>
+              <TextField
+                style={{ border: "1px solid white !important", backgroundColor: "white", width: "42.9%", height: "27px", top: "3px", bottom: "3px", left: "9px" }}
+                error={labelNameLength === 0 ? true : false}
+                helperText={S_errorText}
+                id="outlined-text0"
+                // label={t('labelName')}
+                value={S_labelname}
+                onChange={handleTextChange("labelname")}
+                // onBlur={this.addMUILabel}
+                inputProps={{ maxLength: 32 }}
+                type="text"
+                className={classes.textField1}
+                InputLabelProps={{ shrink: true, style: { fontSize: 12, top: "3px" } }}
+                InputProps={{
+                  style: { fontSize: 12, top: "3px" }
+                }}
+                margin="dense"
+                variant="outlined"
+                size="small"
+              />
+              <RadioGroup
+                name="source"
+                value={S_operation}
+                onChange={e => executeUserAction(e.target.value)}
+                row
+              >
+                <FormControlLabel
+                  margin="dense" style={{ height: "18px", width: "18px", }}
+                  control={<Radio style={{ left: "3px", top: "15px", width: "18px", height: "18px" }} />}
+                  labelPlacement="start"
+                  onClick={addMUILabel}
                   // classes={classes.radioLabel}
                     disabled={(role === "guest")}
                   />
@@ -144,8 +151,8 @@ const LabelWizard = ({
                 </RadioGroup>
               </Grid>
               <Grid item xs={12} style={GridItemStyle}>
-                <div className="LabelColorForDiv ">{t('LabelColor')}</div>
-                <RadioGroup
+              <div style={{userSelect: "none", draggable: "false",}} className="LabelColorForDiv ">{t('LabelColor')}</div>
+              <RadioGroup
                   variant="contained" color="success"
                   style={{ cursor: "pointer", display: 'flex', alignSelf: 'self',  left: 20, fontSize: 12, zIndex: 1, }}
                         hidden={S_enable}
@@ -170,20 +177,27 @@ const LabelWizard = ({
                 </RadioGroup>
               </Grid>
               <Grid item xs={12} style={GridItemStyle}>
-                <TextField style={{ height: "27px", bottom: "4px",LeftTextflied, left: "2px", width: "43%" }}
-                  id="outlined-read-only-input"
-                  label=""
-                  defaultValue={t('LabelType')}
-                  className={classes.textField}
-                  margin="dense"
-                  InputProps={{
-                    readOnly: true,
-                    disableUnderline: true,
-                    style:   inputPropsStyle2
-                  }}
-                  variant="standard"
-                  size="small"
-                />
+              {/* <TextField style={{ height: "27px", bottom: "4px", LeftTextflied, left: "2px", width: "43%" }}
+                id="outlined-read-only-input"
+                label=""
+                defaultValue={t('LabelType')}
+                className={classes.textField}
+                margin="dense"
+                InputProps={{
+                  readOnly: true,
+                  disableUnderline: true,
+                  style: inputPropsStyle2
+                }}
+                variant="standard"
+                size="small"
+              /> */}
+               <div style={{height: "27px", userSelect: "none", draggable: "false", marginTop:"12px",marginLeft:"2px", width: "43%",}}>
+                <span
+                  style={{height: "27px", userSelect: "none", draggable: "false",marginTop:"12px",marginLeft:"10px", fontSize:"12px",  width: "43%",}}
+                >
+                  {t('LabelType')}
+                </span>
+              </div>
                 <TextField
                   style={{ border: "1px solid white !important",height:"27px",backgroundColor:"white", width: "42.9%",left: "7px", bottom: "1px", top: "3px",paddingLeft:"5px" }}
                   id="outlined-typepri"
@@ -206,20 +220,27 @@ const LabelWizard = ({
                 </TextField>
               </Grid>
               <Grid item xs={12} style={GridItemStyle}>
-                <TextField style={{ height: "27px", bottom: "3px",LeftTextflied, left: "1px", width: "43%", }}
-                  id="outlined-read-only-input"
-                  label=""
-                  defaultValue={t('labelWidth')}
-                  className={classes.textField}
-                  margin="dense"
-                  InputProps={{
-                    readOnly: true,
-                    disableUnderline: true,
-                    style:   inputPropsStyle2
-                  }}
-                  variant="standard"
-                  size="small"
-                />
+              {/* <TextField style={{ height: "27px", bottom: "3px", LeftTextflied, left: "1px", width: "43%", }}
+                id="outlined-read-only-input"
+                label=""
+                defaultValue={t('labelWidth')}
+                className={classes.textField}
+                margin="dense"
+                InputProps={{
+                  readOnly: true,
+                  disableUnderline: true,
+                  style: inputPropsStyle2
+                }}
+                variant="standard"
+                size="small"
+              /> */}
+               <div style={{height: "27px", userSelect: "none", draggable: "false", marginTop:"12px",marginLeft:"2px", width: "43%",}}>
+                <span
+                  style={{height: "27px", userSelect: "none", draggable: "false",marginTop:"12px",marginLeft:"10px", fontSize:"12px",  width: "43%",}}
+                >
+                  {t('labelWidth')}
+                </span>
+              </div>
                 <TextField
                   style={{ border: "1px solid white !important", backgroundColor: "white", width: "143px", height: "27px", left: "73px", top: "3px", bottom: "2px" }}
                         error={S_topWidthCheck}
@@ -245,7 +266,7 @@ const LabelWizard = ({
                   label=""
                   defaultValue="mm"
                   className={classes.textField1}
-                  margin="dense" style={{ height: "27px", left: "84px", width: "35px", bottom: "3px", top: "6px" }}
+                margin="dense" style={{ height: "27px", left: "84px", width: "35px", bottom: "3px", top: "6px", userSelect: "none", draggable: "false", }}
                   InputProps={{
                     readOnly: true,
                     maxLength: 2,
@@ -257,21 +278,28 @@ const LabelWizard = ({
                 />
               </Grid>
               <Grid item xs={12} style={GridItemStyle}>
-                <TextField style={{ height: "27px", bottom: "2px",LeftTextflied, left: "1px", width: "43%", }}
-                  id="outlined-read-only-input"
-                  label=""
-                  defaultValue={t('labelLength')}
-                  className={classes.textField}
-                  margin="dense"
-                  InputProps={{
-                    readOnly: true,
-                    disableUnderline: true,
-                    style:   inputPropsStyle2
-                  }}
-                  variant="standard"
-                  size="small"
-                />
-                <TextField
+              {/* <TextField style={{ height: "27px", bottom: "2px", LeftTextflied, left: "1px", width: "43%", }}
+                id="outlined-read-only-input"
+                label=""
+                defaultValue={t('labelLength')}
+                className={classes.textField}
+                margin="dense"
+                InputProps={{
+                  readOnly: true,
+                  disableUnderline: true,
+                  style: inputPropsStyle2
+                }}
+                variant="standard"
+                size="small"
+              /> */}
+               <div style={{height: "27px", userSelect: "none", draggable: "false", marginTop:"12px",marginLeft:"2px", width: "43%",}}>
+                <span
+                  style={{height: "27px", userSelect: "none", draggable: "false",marginTop:"12px",marginLeft:"10px", fontSize:"12px",  width: "43%",}}
+                >
+                  {t('labelLength')}
+                </span>
+              </div>
+              <TextField
                   style={{ border: "1px solid white !important", backgroundColor: "white", width: "143px", height: "27px", left: "73px", top: "2px" }}
                         error={S_topLengthCheck}
                         helperText={S_topLengthText}
@@ -296,8 +324,8 @@ const LabelWizard = ({
                   label=""
                   defaultValue="mm"
                   className={classes.textField1}
-                  margin="dense" style={{ height: "27px", left: "84px", width: "35px", bottom: "3px", top: "6px" }}
-                  InputProps={{
+                margin="dense" style={{ height: "27px", left: "84px", width: "35px", bottom: "3px", top: "6px", userSelect: "none", draggable: "false", }}
+                InputProps={{
                     readOnly: true,
                     maxLength: 2,
                     disableUnderline: true,
@@ -308,21 +336,28 @@ const LabelWizard = ({
                 />
               </Grid>
               <Grid item xs={12} style={GridItemStyle}>
-                <TextField style={{ height: "27px", bottom: "2px",LeftTextflied, left: "1px", width: "30%", textAlign: "center", alignItems: "center" }}
-                  id="outlined-read-only-input"
-                  label=""
-                  defaultValue={t('labelPositionA')}
-                  className={classes.textField}
-                  margin="dense"
-                  InputProps={{
-                    readOnly: true,
-                    disableUnderline: true,
-                    style:   inputPropsStyle2
-                  }}
-                  variant="standard"
-                  size="small"
-                />
-                {/* <div style={{ color: '#ffa500', marginBottom: '0px', padding: "2px", marginTop: "4px", marginLeft: "23px" }} className="arrow" >
+              {/* <TextField style={{ height: "27px", bottom: "2px", LeftTextflied, left: "1px", width: "30%", textAlign: "center", alignItems: "center" }}
+                id="outlined-read-only-input"
+                label=""
+                defaultValue={t('labelPositionA')}
+                className={classes.textField}
+                margin="dense"
+                InputProps={{
+                  readOnly: true,
+                  disableUnderline: true,
+                  style: inputPropsStyle2
+                }}
+                variant="standard"
+                size="small"
+              /> */}
+               <div style={{height: "27px", userSelect: "none", draggable: "false", marginTop:"12px",marginLeft:"2px", width: "30%",}}>
+                <span
+                  style={{height: "27px", userSelect: "none", draggable: "false",marginTop:"12px",marginLeft:"10px", fontSize:"12px",  width: "30%",}}
+                >
+                  {t('labelPositionA')}
+                </span>
+              </div>
+              {/* <div style={{ color: '#ffa500', marginBottom: '0px', padding: "2px", marginTop: "4px", marginLeft: "23px" }} className="arrow" >
                   <TrendingFlatIcon id="trending-flaticon" />
                 </div> */}
                 <div>
@@ -369,21 +404,28 @@ const LabelWizard = ({
                 />
               </Grid>
               <Grid item xs={12} style={GridItemStyle}>
-                <TextField style={{ height: "27px", bottom: "2px",LeftTextflied, left: "1px", width: "30%", textAlign: "center", alignItems: "center" }}
-                  id="outlined-read-only-input"
-                  label=""
-                  defaultValue={t('labelPositionB')}
-                  className={classes.textField}
-                  margin="dense"
-                  InputProps={{
-                    readOnly: true,
-                    disableUnderline: true,
-                    style:   inputPropsStyle2
-                  }}
-                  variant="standard"
-                  size="small"
-                />
-                {/* <div style={{ color: '#8f00ff', marginBottom: '0px', padding: "2px", marginTop: "4px", marginLeft: "23px" }} className="arrow" >
+              {/* <TextField style={{ height: "27px", bottom: "2px", LeftTextflied, left: "1px", width: "30%", textAlign: "center", alignItems: "center" }}
+                id="outlined-read-only-input"
+                label=""
+                defaultValue={t('labelPositionB')}
+                className={classes.textField}
+                margin="dense"
+                InputProps={{
+                  readOnly: true,
+                  disableUnderline: true,
+                  style: inputPropsStyle2
+                }}
+                variant="standard"
+                size="small"
+              /> */}
+              <div style={{height: "27px", userSelect: "none", draggable: "false", marginTop:"12px",marginLeft:"2px", width: "30%",}}>
+                <span
+                  style={{height: "27px", userSelect: "none", draggable: "false",marginTop:"12px",marginLeft:"10px", fontSize:"12px",  width: "30%",}}
+                >
+                  {t('labelPositionB')}
+                </span>
+              </div>
+              {/* <div style={{ color: '#8f00ff', marginBottom: '0px', padding: "2px", marginTop: "4px", marginLeft: "23px" }} className="arrow" >
                   <TrendingFlatIcon id="trending-flaticon" />
                 </div> */}
                 <div>
@@ -428,21 +470,28 @@ const LabelWizard = ({
                 />
               </Grid>
               <Grid item xs={12} style={GridItemStyle}>
-                <TextField style={{ height: "27px", bottom: "3px",LeftTextflied, left: "1px", width: "43%",}}
-                  id="outlined-read-only-input"
-                  label=""
-                  defaultValue={t('SelectLabel')}
-                  className={classes.textField}
-                  margin="dense"
-                  InputProps={{
-                    readOnly: true,
-                    disableUnderline: true,
-                    style:   inputPropsStyle2
-                  }}
-                  variant="standard"
-                  size="small"
-                />
-                <TextField
+              {/* <TextField style={{ height: "27px", bottom: "3px", LeftTextflied, left: "1px", width: "43%", }}
+                id="outlined-read-only-input"
+                label=""
+                defaultValue={t('SelectLabel')}
+                className={classes.textField}
+                margin="dense"
+                InputProps={{
+                  readOnly: true,
+                  disableUnderline: true,
+                  style: inputPropsStyle2
+                }}
+                variant="standard"
+                size="small"
+              /> */}
+              <div style={{height: "27px", userSelect: "none", draggable: "false", marginTop:"12px",marginLeft:"2px", width: "43%",}}>
+                <span
+                  style={{height: "27px", userSelect: "none", draggable: "false",marginTop:"12px",marginLeft:"10px", fontSize:"12px",  width: "43%",}}
+                >
+                  {t('SelectLabel')}
+                </span>
+              </div>
+              <TextField
                   style={{ border: "1px solid white !important", width: "42.9%",height:"27px", top: "2px", bottom: "0px", left: "2px",backgroundColor:"white", paddingLeft:"6px" }}
                   id="outlined-selectlabel"
                   // label={t('SelectedLabel')}
@@ -464,21 +513,28 @@ const LabelWizard = ({
                 </TextField>
               </Grid>
               <Grid item xs={12} style={GridItemStyle}>
-                <TextField style={{ height: "27px", bottom: "2px", top: "4px", left: "11px", width: "43%", }}
-                  id="outlined-read-only-input"
-                  label=""
-                  defaultValue={t('DeleteLabel')}
-                  className={classes.textField}
-                  margin="dense"
-                  InputProps={{
-                    readOnly: true,
-                    disableUnderline: true,
-                    style: { fontSize: 12, }
-                  }}
-                  variant="standard"
-                  size="small"
-                />
-                <RadioGroup
+              {/* <TextField style={{ height: "27px", bottom: "2px", top: "4px", left: "11px", width: "43%", }}
+                id="outlined-read-only-input"
+                label=""
+                defaultValue={t('DeleteLabel')}
+                className={classes.textField}
+                margin="dense"
+                InputProps={{
+                  readOnly: true,
+                  disableUnderline: true,
+                  style: { fontSize: 12, }
+                }}
+                variant="standard"
+                size="small"
+              /> */}
+               <div style={{height: "27px", userSelect: "none", draggable: "false", marginTop:"12px",marginLeft:"2px", width: "43%",}}>
+                <span
+                  style={{height: "27px", userSelect: "none", draggable: "false",marginTop:"12px",marginLeft:"10px", fontSize:"12px",  width: "43%",}}
+                >
+                  {t('DeleteLabel')}
+                </span>
+              </div>
+              <RadioGroup
                   name="source"
                         value={S_operation}
                         onChange={e => executeUserAction(e.target.value)}

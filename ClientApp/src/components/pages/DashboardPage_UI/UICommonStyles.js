@@ -26,7 +26,7 @@ export const ImportDataStyle = {
   border: "1px solid white !important", width: "100.2%", top: "3px", height: "27px", left: "6px", backgroundColor:"white", paddingLeft:"4px"
 }
 export const NamesTextFlied = {
-  marginTop: "14px", marginLeft: "6px"
+  marginTop: "14px", marginLeft: "6px", fontWeight: "400",  userSelect: "none", 
 }
 // export const EditTextFlied = {
 //   width: "110px", fontSize: "12px !important", marginTop: "5px",  marginLeft: "-14px", lineHeight: "1", lineBreak: "auto",
@@ -90,7 +90,7 @@ export const ExpansionPanelStyle = {
 }
 
 export const GridItemStyle = {
-  display: 'flex', width: "100%", height: "48px", flexDirection: 'row', padding: 0, marginBottom: "4px", backgroundColor: color1,
+  display: 'flex', width: "100%", height: "48px", flexDirection: 'row', padding: 0, marginBottom: "4px", backgroundColor: color1,userSelect: "none", draggable: "false",
 }
 
 export const ArrowStyle = {
@@ -105,14 +105,14 @@ export const inputPropsStyle = {
 
 export const inputPropsStyle2 ={
 
-  fontSize: 12, padding: 10
+  fontSize: 12, padding: 10, userSelect:"none",
 }
 export const UnitStyle2 = {
-  height: "27px", left: "128px", width: "40px", top: "4px"
+  height: "27px", left: "128px", width: "40px", top: "4px", userSelect: "none", draggable: "false",
 }
 
 export const LeftTextflied = {
-  paddingTop: "0px", paddingBottom: "0px"
+  paddingTop: "0px", paddingBottom: "0px", userSelect: "none", draggable:"false",
 }
 
 export const UnitStyles1 = {
