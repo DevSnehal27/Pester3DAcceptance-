@@ -173,6 +173,7 @@ class DashboardPage extends React.Component {
     super(props);
     this.state = {
       // selectDropdown: "admin_pallet",
+      checkforimport:false,
       checkforDropdown: false,
       checkforDropdownforsaveasPallet: false,
       checked: [],
@@ -399,6 +400,11 @@ class DashboardPage extends React.Component {
     }
     this.palletnames = [];
     this.palletnames = clean;
+    if (this.palletnames.length > 0 && this.state.role !== 'admin' && this.state.checkforimport==true ) {
+      this.setState({
+        selectpallet: this.palletnames[1]?.id?? null,
+      });
+    }
     console.log("this.palletnames inside initCases = ", this.palletnames);
     this.setState({
       palletnames: this.palletnames,
@@ -2014,6 +2020,9 @@ class DashboardPage extends React.Component {
   };
 
   importFilePalletToDB = async () => {
+    this.setState({
+      checkforimport:true
+    })
     let { t } = this.props;
     const dataArray = this.state.importFilePallet;
     const response = await axios.get(`/threed/adminpallet/${462}`);

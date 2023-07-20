@@ -7136,7 +7136,7 @@ class PaletteDesignerPage extends Component {
       // }
       if (this.HWeighted && this.VWeighted && !(this.Case_Length > 200 && this.Case_Length <= 425)) {
         Frame_List = ["Frame_1", "Frame_6", "Frame_20", "Frame_21", "Frame_22", "Frame_23", "Frame_24", "Frame_25", "Frame_26", "Frame_27", "Frame_28", "Frame_29", "Frame_30", "Frame_31", "Frame_32", "Frame_33", "Frame_34", "Frame_35", "Frame_36", "Frame_37"];
-        console.log("Inside possible frames = 1")
+        console.log("Inside possible frames = 1");
       }
 
       else if (this.HWeighted && this.VWeighted && (this.Case_Length > 200 && this.Case_Length <= 425)) {
@@ -7146,12 +7146,12 @@ class PaletteDesignerPage extends Component {
         //Todays 16/7/2023
         Frame_List = ["Frame_21", "Frame_22", "Frame_23", "Frame_24", "Frame_26", "Frame_31", "Frame_32", "Frame_33", "Frame_34", "Frame_37"];
 
-        console.log("Inside possible frames = 2")
+        console.log("Inside possible frames = 2");
       }
 
       else if (this.HWeighted && !this.VWeighted && !(this.Case_Length > 200 && this.Case_Length <= 425)) {
         Frame_List = ["Frame_1", "Frame_2", "Frame_3", "Frame_4", "Frame_5", "Frame_6", "Frame_8", "Frame_20", "Frame_21", "Frame_22", "Frame_23", "Frame_24", "Frame_25", "Frame_26", "Frame_27", "Frame_28", "Frame_29", "Frame_30", "Frame_31", "Frame_32", "Frame_33", "Frame_34", "Frame_35", "Frame_36", "Frame_37"];
-        console.log("Inside possible frames = 3")
+        console.log("Inside possible frames = 3");
       }
 
       else if (this.HWeighted && !this.VWeighted && (this.Case_Length > 200 && this.Case_Length <= 425)) {
@@ -7160,21 +7160,21 @@ class PaletteDesignerPage extends Component {
 
         //Todays 16/7/2023
         Frame_List = ["Frame_2", "Frame_3", "Frame_4", "Frame_5", "Frame_8", "Frame_21", "Frame_22", "Frame_23", "Frame_24", "Frame_26", "Frame_31", "Frame_32", "Frame_33", "Frame_34", "Frame_37"];
-        console.log("Inside possible frames = 4")
+        console.log("Inside possible frames = 4");
       }
 
       else if (!this.HWeighted && this.VWeighted && !(this.Case_Length > 200 && this.Case_Length <= 425)) {
         Frame_List = ["Frame_1", "Frame_6", "Frame_7", "Frame_9", "Frame_10", "Frame_11", "Frame_20", "Frame_21", "Frame_22", "Frame_23", "Frame_24", "Frame_25", "Frame_26", "Frame_27", "Frame_28", "Frame_29", "Frame_30", "Frame_31", "Frame_32", "Frame_33", "Frame_34", "Frame_35", "Frame_36", "Frame_37"];
-        console.log("Inside possible frames = 5")
+        console.log("Inside possible frames = 5");
       }
 
       else if (!this.HWeighted && this.VWeighted && (this.Case_Length > 200 && this.Case_Length <= 425)) {
         // Frame_List = ["Frame_6", "Frame_7", "Frame_9", "Frame_10", "Frame_11", "Frame_20", "Frame_21", "Frame_22", "Frame_23", "Frame_24", "Frame_25", "Frame_26", "Frame_27", "Frame_28", "Frame_29", "Frame_30", "Frame_31", "Frame_32", "Frame_33", "Frame_34", "Frame_35", "Frame_37"];
         // Frame_List = ["Frame_6", "Frame_7", "Frame_9", "Frame_10", "Frame_11", "Frame_21", "Frame_22", "Frame_23", "Frame_24", "Frame_26", "Frame_31", "Frame_32", "Frame_33", "Frame_34", "Frame_35", "Frame_37"];
 
-        //Todays 16/7/2023
-        Frame_List = ["Frame_7", "Frame_9", "Frame_10", "Frame_11", "Frame_21", "Frame_22", "Frame_23", "Frame_24", "Frame_26", "Frame_31", "Frame_32", "Frame_33", "Frame_34", "Frame_37"];
-        console.log("Inside possible frames = 6")
+        // Frame_List = ["Frame_7", "Frame_9", "Frame_10", "Frame_11", "Frame_21", "Frame_22", "Frame_23", "Frame_24", "Frame_26", "Frame_31", "Frame_32", "Frame_33", "Frame_34", "Frame_37"];
+        Frame_List = ["Frame_9", "Frame_10", "Frame_11", "Frame_21", "Frame_22", "Frame_23", "Frame_24", "Frame_26", "Frame_31", "Frame_32", "Frame_33", "Frame_34", "Frame_37"];
+        console.log("Inside possible frames = 6");
       }
 
       else {
@@ -7486,7 +7486,8 @@ class PaletteDesignerPage extends Component {
 
       if ((this.HWeighted === false) && (this.VWeighted === true)) {
 
-        let Pal_1 = ["Top-Left", "Top-Right"];
+        // let Pal_1 = ["Top-Left", "Top-Right"];
+        let Pal_1 = ["Top-Left"];
         let Pal_2 = ["Top-Left-V2", "Top-Right-V2", "TL-B-V2", "TR-B-V2"];
 
         Pal_1.forEach((value1, index) => {
@@ -7502,7 +7503,7 @@ class PaletteDesignerPage extends Component {
 
       }
       else {
-        let Pal_1 = ["Bottom-Left", "Bottom-Right"];
+        let Pal_1 = ["Bottom-Left"];
         let Pal_2 = ["Top-Left-V2", "Top-Right-V2", "TL-B-V2", "TR-B-V2", "Bottom-Right-V2", "Bottom-Left-V2", "BL-T-V2", "BR-T-V2"];
 
         Pal_1.forEach((value1, index) => {
@@ -7522,9 +7523,13 @@ class PaletteDesignerPage extends Component {
 
       if ((this.HWeighted === true) && (this.VWeighted === false)) {
 
-        let Pal_1 = ["Top-Left-V2", "Top-Right-V2"];
-        let Pal_2 = ["Top-Left", "Top-Right"];
-        let Pal_3 = ["Top-Left", "Top-Right"];
+        // let Pal_1 = ["Top-Left-V2", "Top-Right-V2"];
+        // let Pal_2 = ["Top-Left", "Top-Right"];
+        // let Pal_3 = ["Top-Left", "Top-Right"];
+
+        let Pal_1 = ["Top-Left-V2"];
+        let Pal_2 = ["Top-Left"];
+        let Pal_3 = ["Top-Left"];
 
         Pal_1.forEach((value1, index) => {
 

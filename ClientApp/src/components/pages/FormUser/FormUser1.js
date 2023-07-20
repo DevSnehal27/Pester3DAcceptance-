@@ -6670,14 +6670,17 @@ class FormUserPage1 extends Component {
   // }
 
   addMUILabel = () => {
+    let { t } = this.props;
 
-    if (this.state.labelname === "") {
+    if (this.state.labelname.trim() === "" || this.state.labelname.trim() === "Label0") {
       console.log("empty labelName 2");
       this.state.labelname = "Label0"
+      toast.error(t('nameisinvalid'), { autoClose: 5000, position: toast.POSITION.TOP_CENTER });
     }
-    if (this.state.labelname !== "" && this.state.labelname !== "Label0") {
+    
+    if (this.state.labelname.trim() !== "" && this.state.labelname.trim() !== "Label0" ) {
       console.log("addMUILabel is called");
-      this.globalName = this.state.labelname;
+      this.globalName = this.state.labelname.trim();
       this.globalWidth = this.state.labelwidth;
       this.globalHeight = this.state.labellength;
       this.globalx = this.state.labela;
@@ -6685,7 +6688,7 @@ class FormUserPage1 extends Component {
       this.globalType = this.state.labeltype;
       console.log("this.globalName = ", this.globalName);
       this.state.selectlabel = this.globalName;
-      let { t } = this.props;
+     
 
       if ((this.labelNames.indexOf(this.globalName) > -1) || (this.globalName && this.globalName === "Label0" && this.globalName == "")) {
         console.log("Label name is invalid");
