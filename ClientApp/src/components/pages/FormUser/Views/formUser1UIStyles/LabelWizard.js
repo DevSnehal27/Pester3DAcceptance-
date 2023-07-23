@@ -151,15 +151,15 @@ const LabelWizard = ({
                 </RadioGroup>
               </Grid>
               <Grid item xs={12} style={GridItemStyle}>
-              <div style={{userSelect: "none", draggable: "false",}} className="LabelColorForDiv ">{t('LabelColor')}</div>
+              <div id="multiplecolor" style={{userSelect: "none", draggable: "false",}} className="LabelColorForDiv ">{t('LabelColor')}</div>
               <RadioGroup
                   variant="contained" color="success"
-                  style={{ cursor: "pointer", display: 'flex', alignSelf: 'self',  left: 20, fontSize: 12, zIndex: 1, }}
-                        hidden={S_enable}
+                style={{ cursor: "default", display: 'flex', alignSelf: 'self', left: 20, fontSize: 12, zIndex: 1, }}
+                hidden={S_enable}
                         onClick={() => forSetHidden(!S_setHidden)}>
 
-                  <FormControlLabel
-                    value="Color"
+                <FormControlLabel className="printingme"
+                  value="Color"
                   control={<Radio style={{left: S_colorleft, bottom: "4px", marginTop: S_colormarginTop,  }} />}
                     labelPlacement="start"
                     // label={<Box component="div" fontSize={12} style={{ marginLeft: "-185px" }} >Label Color</Box>}

@@ -171,6 +171,7 @@ class PaletteDesignerPage extends Component {
 
       errorWorkingaraeaLengthfor2: false,
       errorHelperForWorkingareaLengthfor2: "",
+      simulationToast :false,
 
 
       errorWorkingaraeaoffsetWidthfor2: false,
@@ -7144,8 +7145,7 @@ class PaletteDesignerPage extends Component {
         // Frame_List = ["Frame_6", "Frame_21", "Frame_22", "Frame_23", "Frame_24", "Frame_26", "Frame_31", "Frame_32", "Frame_33", "Frame_34", "Frame_35", "Frame_37"];
 
         //Todays 16/7/2023
-        Frame_List = ["Frame_21", "Frame_22", "Frame_23", "Frame_24", "Frame_26", "Frame_31", "Frame_32", "Frame_33", "Frame_34", "Frame_37"];
-
+        Frame_List = ["Frame_1", "Frame_21", "Frame_22", "Frame_23", "Frame_24", "Frame_26", "Frame_31", "Frame_32", "Frame_33", "Frame_34", "Frame_35", "Frame_37"];
         console.log("Inside possible frames = 2");
       }
 
@@ -7159,7 +7159,7 @@ class PaletteDesignerPage extends Component {
         // Frame_List = ["Frame_2", "Frame_3", "Frame_4", "Frame_5", "Frame_6", "Frame_8", "Frame_21", "Frame_22", "Frame_23", "Frame_24", "Frame_26", "Frame_31", "Frame_32", "Frame_33", "Frame_34", "Frame_35", "Frame_37"];
 
         //Todays 16/7/2023
-        Frame_List = ["Frame_2", "Frame_3", "Frame_4", "Frame_5", "Frame_8", "Frame_21", "Frame_22", "Frame_23", "Frame_24", "Frame_26", "Frame_31", "Frame_32", "Frame_33", "Frame_34", "Frame_37"];
+        Frame_List = ["Frame_2", "Frame_3", "Frame_4", "Frame_5", "Frame_8", "Frame_21", "Frame_22", "Frame_23", "Frame_24", "Frame_26", "Frame_31", "Frame_32", "Frame_33", "Frame_34", "Frame_35", "Frame_37"];
         console.log("Inside possible frames = 4");
       }
 
@@ -7173,8 +7173,14 @@ class PaletteDesignerPage extends Component {
         // Frame_List = ["Frame_6", "Frame_7", "Frame_9", "Frame_10", "Frame_11", "Frame_21", "Frame_22", "Frame_23", "Frame_24", "Frame_26", "Frame_31", "Frame_32", "Frame_33", "Frame_34", "Frame_35", "Frame_37"];
 
         // Frame_List = ["Frame_7", "Frame_9", "Frame_10", "Frame_11", "Frame_21", "Frame_22", "Frame_23", "Frame_24", "Frame_26", "Frame_31", "Frame_32", "Frame_33", "Frame_34", "Frame_37"];
-        Frame_List = ["Frame_9", "Frame_10", "Frame_11", "Frame_21", "Frame_22", "Frame_23", "Frame_24", "Frame_26", "Frame_31", "Frame_32", "Frame_33", "Frame_34", "Frame_37"];
+        // Frame_List = ["Frame_9", "Frame_10", "Frame_11", "Frame_21", "Frame_22", "Frame_23", "Frame_24", "Frame_26", "Frame_31", "Frame_32", "Frame_33", "Frame_34", "Frame_34","Frame_37"];
+
+        Frame_List = ["Frame_1", "Frame_9", "Frame_10", "Frame_11", "Frame_21", "Frame_22", "Frame_23", "Frame_24", "Frame_26", "Frame_31", "Frame_32", "Frame_33", "Frame_34", "Frame_34", "Frame_35", "Frame_37"];
         console.log("Inside possible frames = 6");
+      }
+
+      else if (!this.HWeighted && !this.VWeighted && (this.Case_Length > 200 && this.Case_Length <= 425)){
+        Frame_List = ["Frame_1", "Frame_2", "Frame_3", "Frame_4", "Frame_5", "Frame_6", "Frame_7", "Frame_8", "Frame_20", "Frame_21", "Frame_22", "Frame_23", "Frame_24", "Frame_25", "Frame_26", "Frame_27", "Frame_28", "Frame_31", "Frame_32", "Frame_33", "Frame_34", "Frame_35", "Frame_36", "Frame_37"];
       }
 
       else {
@@ -7227,7 +7233,7 @@ class PaletteDesignerPage extends Component {
         })
 
       }
-      else if ((this.HWeighted === false) && (this.VWeighted === true)) {
+      else if ((this.HWeighted === false) && (this.VWeighted === true)  && !(this.Case_Length > 239 && this.Case_Length <= 425)) {
 
         let Pal_1 = ["Top-Left", "Top-Right", "TL-to-B", "TR-to-B"]
 
@@ -7240,10 +7246,34 @@ class PaletteDesignerPage extends Component {
         })
 
       }
-      else if ((this.HWeighted === true) && (this.VWeighted === true)) {
+      else if ((this.HWeighted === false) && (this.VWeighted === true)  && (this.Case_Length > 239 && this.Case_Length <= 425)) {
+
+        let Pal_1 = ["Top-Left", "Top-Right"]
+
+        Pal_1.forEach((value1, index) => {
+
+          // console.log("value's ", Selected_Frame, value1)
+
+          varientsList.push([Selected_Frame, value1])
+
+        })
+
+      }
+
+      else if ((this.HWeighted === true) && (this.VWeighted === true) && !(this.Case_Length > 239 && this.Case_Length <= 425)) {
         //
         let Pal_1 = ["Top-Left", "Top-Right", "TL-to-B", "TR-to-B"]
+        Pal_1.forEach((value1, index) => {
 
+          // console.log("value's ", Selected_Frame, value1)
+
+          varientsList.push([Selected_Frame, value1])
+        })
+
+      }
+      else if ((this.HWeighted === true) && (this.VWeighted === true) && (this.Case_Length > 239 && this.Case_Length <= 425)) {
+        //
+        let Pal_1 = ["Top-Left", "Top-Right"]
         Pal_1.forEach((value1, index) => {
 
           // console.log("value's ", Selected_Frame, value1)
@@ -7268,10 +7298,27 @@ class PaletteDesignerPage extends Component {
     }
     else if (Selected_Frame === "Frame_2") {
 
-      if ((this.HWeighted === true) && (this.VWeighted === false)) {
+      if ((this.HWeighted === true) && (this.VWeighted === false) && !(this.Case_Length > 239 && this.Case_Length <= 425)) {
 
         let Pal_1 = ["Top-Left-V2"]
         let Pal_2 = ["TL-to-B", "TR-to-B", "Top-Left", "Top-Right"]
+
+        Pal_1.forEach((value1, index) => {
+
+          Pal_2.forEach((value2, index) => {
+
+            // console.log("value's ", Selected_Frame, value1, value2)
+
+            varientsList.push([Selected_Frame, value1, value2])
+
+          })
+        })
+
+      }
+      else if ((this.HWeighted === true) && (this.VWeighted === false) && (this.Case_Length > 239 && this.Case_Length <= 425)) {
+
+        let Pal_1 = ["Top-Left-V2"]
+        let Pal_2 = [ "Top-Left", "Top-Right"]
 
         Pal_1.forEach((value1, index) => {
 
@@ -7342,7 +7389,7 @@ class PaletteDesignerPage extends Component {
     }
     else if (Selected_Frame === "Frame_4") {
 
-      if ((this.HWeighted === true) && (this.VWeighted === false)) {
+      if ((this.HWeighted === true) && (this.VWeighted === false) && !(this.Case_Length > 239 && this.Case_Length <= 425)) {
 
         let Pal_1 = ["Top-Left-V2"]
         let Pal_2 = ["TL-to-B", "TR-to-B", "Top-Left", "Top-Right"]
@@ -7358,7 +7405,25 @@ class PaletteDesignerPage extends Component {
           })
         })
 
-      } else {
+      } 
+      else if ((this.HWeighted === true) && (this.VWeighted === false) && (this.Case_Length > 239 && this.Case_Length <= 425)) {
+
+        let Pal_1 = ["Top-Left-V2"]
+        let Pal_2 = ["Top-Left", "Top-Right"]
+
+        Pal_1.forEach((value1, index) => {
+
+          Pal_2.forEach((value2, index) => {
+
+            // console.log("value's ", Selected_Frame, value1, value2)
+
+            varientsList.push([Selected_Frame, value1, value2])
+
+          })
+        })
+
+      } 
+      else {
 
         let Pal_1 = ["Top-Left-V2", "Bottom-Left-V2"];
         let Pal_2 = ["Top-Left", "Bottom-Left", "Top-Right", "Bottom-Right", "TL-to-B", "TR-to-B", "BL-to-T", "BR-to-T"];
@@ -7570,9 +7635,26 @@ class PaletteDesignerPage extends Component {
     }
     else if (Selected_Frame === "Frame_9") {
 
-      if ((this.HWeighted === false) && (this.VWeighted === true)) {
+      if ((this.HWeighted === false) && (this.VWeighted === true) && !(this.Case_Length > 239 && this.Case_Length <= 350)) {
 
         let Pal_1 = ["Top-Left", "Top-Right"];
+        let Pal_2 = ["Top-Left", "Top-Right"];
+
+        Pal_1.forEach((value1, index) => {
+
+          Pal_2.forEach((value2, index) => {
+
+            // console.log("value's ", Selected_Frame, value1, value2)
+
+            varientsList.push([Selected_Frame, value1, value2])
+
+          })
+        })
+
+      }
+      else if ((this.HWeighted === false) && (this.VWeighted === true) && (this.Case_Length > 239 && this.Case_Length <= 350)) {
+
+        let Pal_1 = [];
         let Pal_2 = ["Top-Left", "Top-Right"];
 
         Pal_1.forEach((value1, index) => {
@@ -16405,7 +16487,7 @@ class PaletteDesignerPage extends Component {
                           <SwiperSlide key={index} style={{ position: "relative" }}>
                             <p style={{ marginTop: this.state.dyMarginTop_swiperText, textAlign: "center", marginBottom: this.state.dyMarginBottom_swiperText, marginLeft: this.state.dyMarginLeft_swiperText, position: "relative" }}>
                               {this.variantName_array[index]}</p>
-                            <img src={image} alt="" style={{ marginTop: this.state.dyMarginTop_swiper, left: "45px", right: "17px", position: "relative" }} />
+                            <img src={image} alt="" style={{ marginTop: this.state.dyMarginTop_swiper, left: "45px", right: "17px", border:"2px solid", position: "relative" }} />
 
                           </SwiperSlide>
 
@@ -16625,6 +16707,7 @@ class PaletteDesignerPage extends Component {
                       abordSimulation={this.state.abordSimulation}
                       Case_Height_Original={this.Case_Height}
                       noOfLayers={this.noOfLayers}
+                      simulationToast = {this.state.simulationToast}
                     // callSchema1={this.callSchema1}                    
                     />
                   }

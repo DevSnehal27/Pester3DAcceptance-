@@ -353,7 +353,7 @@ class FormUserPage1 extends Component {
       errorLabelPosBCondition: false,
       errorLabelPosB: "",
 
-      colorleft: '259px',
+      colorleft: '256px',
       colormarginTop: '8px',
 
       selectedCase: "Advanced",
@@ -4939,7 +4939,7 @@ class FormUserPage1 extends Component {
   // };
 
   cubeFor3DLabels = (label) => {
-    if (this.state.labelname === label.labelname) {
+    if (this.state.labelname.trim() === label.labelname.trim()) {
       console.log("Inside cubeForFrontandTop label", label);
       console.log(
         "Inside cubeForFrontandTop label.labelname ",
@@ -10055,7 +10055,7 @@ class FormUserPage1 extends Component {
       this.colormarginTop = this.colormarginTop;
 
       this.setState({
-        colorleft: '259px',
+        colorleft: '256px',
         // colortop: '15px',
         colormarginTop: "8px"
       })

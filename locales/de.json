@@ -142,5 +142,6 @@
   "passed": "Bestanden",
   "aborted": "Abgebrochen",
   "failed": "Fehlgeschlagen",
-  "0simulationspeed,simulationcannotbestarted": "0 Simulationsgeschwindigkeit, Simulation kann nicht gestartet werden"
+  "0simulationspeed,simulationcannotbestarted": "0 Simulationsgeschwindigkeit, Simulation kann nicht gestartet werden",
+  "adminpalletcannotberenamed" : "Admin-Palette kann nicht umbenannt werden"
 }

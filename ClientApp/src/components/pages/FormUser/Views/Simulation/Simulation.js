@@ -116,6 +116,7 @@ function Simulation(props) {
               abordSimulation={props.abordSimulation}
               Case_Height_Original={props.Case_Height_Original}
               noOfLayers={props.noOfLayers}
+              simulationToast = {props.simulationToast}
             // callSchema1={props.callSchema1}
             />
           </Suspense>

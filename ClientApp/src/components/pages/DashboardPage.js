@@ -708,7 +708,7 @@ class DashboardPage extends React.Component {
         item: "",
       });
     } else {
-      this.setState({ item: e.target.value });
+      this.setState({ item: e.target.value.trim() });
       // this.setState({ item: e.target.value.replace(/[^a-zA-Z0-9-#_]/ig, '') });
     }
   }
@@ -733,7 +733,7 @@ class DashboardPage extends React.Component {
         item1: "",
       });
     } else {
-      this.setState({ item1: e.target.value });
+      this.setState({ item1: e.target.value.trim() });
       // this.setState({ item: e.target.value.replace(/[^a-zA-Z0-9-#_]/ig, '') });
     }
   }
@@ -953,7 +953,7 @@ class DashboardPage extends React.Component {
         item1: "",
       });
     } else {
-      this.setState({ item1: e.target.value });
+      this.setState({ item1: e.target.value.trim() });
       // this.setState({ item: e.target.value.replace(/[^a-zA-Z0-9-#_]/ig, '') });
     }
   }
@@ -1062,13 +1062,13 @@ class DashboardPage extends React.Component {
               err.response.status === 400 &&
               !errorShownFor.includes(record.palletId)
             ) {
-              let { t } = this.props;
+              // let { t } = this.props;
               errorShownFor.push(record.palletId);
-              toast.warn(t('thisdatasetcannotbedeleted'), {
-                position: toast.POSITION.TOP_CENTER,
-                autoClose: 2000,
-              });
-              this.initCases();
+              // toast.warn(t('thisdatasetcannotbedeleted'), {
+              //   position: toast.POSITION.TOP_CENTER,
+              //   autoClose: 2000,
+              // });
+              // this.initCases();
             }
           } else {
             this.setState({
@@ -1149,6 +1149,15 @@ class DashboardPage extends React.Component {
 
   deleteOnePallet = () => {
     const deletePallet = this.state.selectpallet;
+    console.log(deletePallet)
+    if(deletePallet===462){
+      let { t } = this.props;
+          toast.warn(t('thisdatasetcannotbedeleted'), {
+            position: toast.POSITION.TOP_CENTER,
+            autoClose: 2000,
+          });
+      return
+    }
     const status = this.deleteAllPallet(deletePallet);
     this.sleep(2000);
     let palletsTemp = this.pallets;
@@ -1757,7 +1766,7 @@ class DashboardPage extends React.Component {
     this.setState({
       checkforDropdown: true,
     })
-    const caseSave = this.state.caseSave;
+    const caseSave = this.state.caseSave.trim();
     //to include everything after # we use encodeURIComponent
     const name = encodeURIComponent(this.state.selectcase);
     console.log(this.state.caseSave, "saveas");
@@ -1822,7 +1831,7 @@ class DashboardPage extends React.Component {
     const id = this.state.id;
     //to include everything after # we use encodeURIComponent
     const name = encodeURIComponent(this.state.selectcase);
-    const caseRename = this.state.caseRename;
+    const caseRename = this.state.caseRename.trim();
     let { t } = this.props;
     if (!caseRename) {
       return toast.error(t('valuerequired'), {
@@ -1903,9 +1912,19 @@ class DashboardPage extends React.Component {
         autoClose: 3000,
       });
     }
-
+    if(id==462){
+      let { t } = this.props;
+       toast.error(t('adminpalletcannotberenamed'), {
+        position: toast.POSITION.TOP_CENTER,
+        autoClose: 3000,
+      });
+      this.setState({
+        PalletRename: "",
+      });
+      return
+    }
     await axios
-      .put(`threed/renamepallet/${id}`, { PalletName: PalletRename })
+      .put(`threed/renamepallet/${id}`, { PalletName: PalletRename.trim() })
       .then((response) => {
         if (response.data) {
           this.state.selectpallet = id;
@@ -2138,7 +2157,7 @@ class DashboardPage extends React.Component {
       });
     }
     axios
-      .post(`/threed/savepallet/${id}`, { palletName: PalletName })
+      .post(`/threed/savepallet/${id}`, { palletName: PalletName.trim() })
       .then((response) => {
         if (response.data) {
           this.VerifyOldPalletAndPallet();

@@ -306,3 +306,8 @@ section img {
 .MuiRadio-colorSecondary.Mui-checked {
   color: #f50057 !important;
 }
+.MuiFormControlLabel-labelPlacementStart {
+  margin-right: -60px !important;
+  cursor: default !important;
+  flex-direction: row-reverse;
+}

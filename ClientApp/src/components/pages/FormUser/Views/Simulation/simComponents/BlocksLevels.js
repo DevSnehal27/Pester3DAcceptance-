@@ -420,7 +420,11 @@ const BlocksLevels = (props) => {
 
   useEffect(() => {
     if (!props.prc_values_check) {
-      toast.error(props.t(`pleasesetallvaluesandpositionsofcasesinProgramRoutineCreator`), { autoClose: 5000, position: toast.POSITION.TOP_CENTER });
+      console.log("Inside Bikram  = ",props.simulationToast);
+     
+      props.simulationToast == false ? toast.error(props.t(`pleasesetallvaluesandpositionsofcasesinProgramRoutineCreator`), { autoClose: 5000, position: toast.POSITION.TOP_CENTER }) : "";
+      
+      // props.Biks = true;
       props.handleAbortSimulation()
     }
 

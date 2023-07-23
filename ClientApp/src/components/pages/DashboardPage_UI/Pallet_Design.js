@@ -218,7 +218,7 @@ const PalletDesign = ({
                                     </span>
                                 </div>
                                 <TextField
-                                    style={{ bottom: "1px", top: "-41px", height: "27px", left: "215px", width: "65.1%", backgroundColor: "white" }}
+                                    style={{ bottom: "1px", top: "-41px", height: "27px", left: "215px", width: "77%", backgroundColor: "white" }}
 
                                     placeholder=""
                                     id="outlined-textcase1rename"
@@ -283,7 +283,7 @@ const PalletDesign = ({
                                     </span>
                                 </div>
                                 <TextField
-                                    style={{ bottom: "1px", top: "-42px", height: "27px", left: "214px", width: "52.1%", border: "1px solid white !important", backgroundColor: "white", }}
+                                    style={{ bottom: "1px", top: "-42px", height: "27px", left: "214px", width: "59.4%", border: "1px solid white !important", backgroundColor: "white", }}
 
                                     placeholder=""
                                     id="outlined-textcase1saveAs"
@@ -347,7 +347,7 @@ const PalletDesign = ({
                                     label={
                                         <Box
                                             component="div"
-                                            style={{ width: "110px", fontSize: "12px !important",userSelect: "none", marginTop: "12px", marginLeft: "-14px", marginBottom: "10px", lineHeight: "1", lineBreak: "auto", }}
+                                            style={{ width: "110px", fontSize: "12px !important",userSelect: "none", marginTop: "12px", marginLeft: "-12px", marginBottom: "10px", lineHeight: "1", lineBreak: "auto", }}
                                             fontsize={12}
                                         >
                                             {t("editPallet")}
@@ -372,7 +372,7 @@ const PalletDesign = ({
                                     label={
                                         <Box
                                             component="div"
-                                            style={{ width: "100px", fontSize: "12px !important",userSelect: "none", marginTop: "11px", marginLeft: "13px", lineBreak: "auto", lineHeight: "1", marginBottom: "9px" }}
+                                            style={{ width: "100px", fontSize: "12px !important",userSelect: "none", marginTop: "11px", marginLeft: "64px", lineBreak: "auto", lineHeight: "1", marginBottom: "9px" }}
                                             fontsize={12}
                                         >
                                             {t("deletePallet")}
@@ -396,7 +396,7 @@ const PalletDesign = ({
                                         <Radio
                                             style={{
                                                 marginTop: "14px",
-                                                left: "-2px",
+                                                left: "-3px",
                                                 bottom: "6px",
                                                 width: "18px",
                                                 height: "18px"
@@ -408,7 +408,7 @@ const PalletDesign = ({
                                     label={
                                         <Box
                                             component="div"
-                                            style={{ width: "129px", fontSize: "12px !important",userSelect: "none", marginTop: "7px", marginLeft: "21px", marginBottom: "4px", lineBreak: "auto", lineHeight: 1, }}
+                                            style={{ width: "129px", fontSize: "12px !important",userSelect: "none", marginTop: "7px", marginLeft: "68px", marginBottom: "4px", lineBreak: "auto", lineHeight: 1, }}
                                             fontsize={12}
                                         >
                                             {t("exportPalletData")}

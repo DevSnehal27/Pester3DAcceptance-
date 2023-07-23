@@ -246,6 +246,7 @@ const BuildingModal3d = (props) => {
             t={props.t}
             abordSimulation={props.abordSimulation}
             simulationRunning={props.simulationRunning}
+            simulationToast = {props.simulationToast}
           />
         }
 

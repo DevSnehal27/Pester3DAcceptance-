@@ -11,10 +11,10 @@ export const GridTopStyle = {
   marginTop: "7px"
 }
 export const TextFieldStyle = {
-  bottom: "1px", top: "-42px", height: "27px", left: "220px", width: "52.1%", border: "1px solid white !important", backgroundColor: "white",
+  bottom: "1px", top: "-42px", height: "27px", left: "220px", width: "58.7%", border: "1px solid white !important", backgroundColor: "white",
 }
 export const AddTextflied = {
-  bottom: "1px",  top: "-41px", height: "27px", left: "220px", width: "52.6%", backgroundColor: "white",border: "1px solid white !important",
+  bottom: "1px",  top: "-41px", height: "27px", left: "220px", width: "60.2%", backgroundColor: "white",border: "1px solid white !important",
 }
 export const CDropdown = {
   border: "1px solid white !important", width: "42.9%", top: "3px", height: "27px", left: "7px", backgroundColor:"white", paddingLeft:"4px"

@@ -327,7 +327,7 @@ const CaseDesign = ({
                                     label={
                                         <Box
                                             component="div"
-                                            style={{ width: "110px", fontSize: "12px !important", marginTop: "12px", marginLeft: "-14px", marginBottom: "10px", lineHeight: "1", lineBreak: "auto", }}
+                                            style={{ width: "110px",userSelect: "none", fontSize: "12px !important", marginTop: "12px", marginLeft: "-12px", marginBottom: "10px", lineHeight: "1", lineBreak: "auto", }}
                                             fontsize={12}
                                         >
                                             {t("editCase")}
@@ -351,7 +351,7 @@ const CaseDesign = ({
                                     label={
                                         <Box className=""
                                             component="div"
-                                            style={{ width: "100px", fontSize: "12px !important", marginTop: "11px", marginLeft: "13px", lineBreak: "auto", lineHeight: "1", marginBottom: "9px" }}
+                                            style={{ width: "100px",  userSelect: "none", fontSize: "12px !important", marginTop: "11px", marginLeft: "64px", lineBreak: "auto", lineHeight: "1", marginBottom: "9px" }}
                                             fontsize={12}
                                         >
                                             {t("deleteCase")}
@@ -374,7 +374,7 @@ const CaseDesign = ({
                                         <Radio
                                             style={{
                                                 marginTop: "14px",
-                                                left: "-2px",
+                                                left: "-5px",
                                                 bottom: "6px",
                                                 width: "18px",
                                                 height: "18px"
@@ -385,7 +385,7 @@ const CaseDesign = ({
                                     label={
                                         <Box
                                             component="div"
-                                            style={{ width: "129px", cursor: "default", pointerEvents: "none", fontSize: "12px !important", marginTop: "7px", marginLeft: "21px", marginBottom: "4px", lineBreak: "auto", lineHeight: 1, }}
+                                            style={{ width: "129px", userSelect: "none", pointerEvents: "none", fontSize: "12px !important", marginTop: "7px", marginLeft: "68px", marginBottom: "4px", lineBreak: "auto", lineHeight: 1, }}
                                             fontsize={12}
                                         >
                                             {t("exportData")}
