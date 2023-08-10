@@ -122,14 +122,9 @@ function Simulation(props) {
           </Suspense>
         </Canvas>
       </div>
-  {/* <h2 style={{marginTop: "10%"}}>Width: {windowSize.innerWidth}</h2>
-    <h2>Height: {windowSize.innerHeight}</h2> */}
-      <div style={{
-        zIndex: 12,
-        // display: "none"
-        marginTop: "900px",
-        marginLeft:windowSize.innerWidth>3000?(windowSize.innerWidth/10)+50:(windowSize.innerWidth/10)+100,
-      }} className="CaptureDiv">
+   {/* <h2 style={{marginTop: "10%"}}>Width: {windowSize.innerWidth}</h2>
+    <h2>Height: {windowSize.innerHeight}</h2>  */}
+      <div className="CaptureDiv">
         <Grid>
           <Grid>
             {/* <Canvas id="three-canvas-container" shadows>

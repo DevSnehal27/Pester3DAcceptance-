@@ -8974,7 +8974,7 @@ class PaletteDesignerPage extends Component {
       toast.error(t(`pleasesetallvaluesandpositionsofcasesinProgramRoutineCreator`), { autoClose: 5000, position: toast.POSITION.TOP_CENTER });
     }
   }
-
+ 
   getAllThreedOBJECT = () => {
     let sceneObjects = [];
     let outsideLabelPriority = [...this.listForOutsideLabelPrior];
@@ -8982,9 +8982,9 @@ class PaletteDesignerPage extends Component {
 
 
 
-    const image2d = GetEmptyCase().toDataURL("image/png", 1.0);
-    const image2dPallet = GetCapturePallet().toDataURL("image/png", 1.0);
-
+    const image2d = GetEmptyCase().toDataURL("image/png");
+    console.log("Base64",image2d);
+    const image2dPallet = GetCapturePallet().toDataURL("image/png");
     sceneObjects.push({ "label_Type": "Pallet", "file": this.convertBase64ToImage(image2dPallet, 'png', "Pallet") });
     sceneObjects.push({ "label_Type": "emptyCase", "file": this.convertBase64ToImage(image2d, 'png', "emptyCase") });
 
@@ -8995,7 +8995,7 @@ class PaletteDesignerPage extends Component {
       console.log("checking shorten_OLPrior for label check shorten_OLPrior/getAllThreedOBJECT::: ", shorten_OLPrior)
 
       if (shorten_OLPrior == "Front") {
-        const image2d = GetFrontCase().toDataURL("image/png", 1.0);
+        const image2d = GetFrontCase().toDataURL("image/png");
         sceneObjects.push({ "label_Type": "Front", "file": this.convertBase64ToImage(image2d, 'png', "Front") });
         // const image2d = GetFrontCase().toDataURL("image/png", 1.0);
         // const a = document.createElement("a");
@@ -9003,7 +9003,7 @@ class PaletteDesignerPage extends Component {
         // a.download = "Front.png"
         // a.click();
       } else if (shorten_OLPrior == "Top") {
-        const image2d = GetTopCase().toDataURL("image/png", 1.0);
+        const image2d = GetTopCase().toDataURL("image/png");
         sceneObjects.push({ "label_Type": "Top", "file": this.convertBase64ToImage(image2d, 'png', "Top") });
         // const image2d = GetTopCase().toDataURL("image/png", 1.0);
         // const a = document.createElement("a");
@@ -9011,7 +9011,7 @@ class PaletteDesignerPage extends Component {
         // a.download = "Top.png"
         // a.click();
       } else if (shorten_OLPrior == "Left") {
-        const image2d = GetLeftCase().toDataURL("image/png", 1.0);
+        const image2d = GetLeftCase().toDataURL("image/png");
         sceneObjects.push({ "label_Type": "Left", "file": this.convertBase64ToImage(image2d, 'png', "Left") });
         // const image2d = GetLeftCase().toDataURL("image/png", 1.0);
         // const a = document.createElement("a");
@@ -9019,7 +9019,7 @@ class PaletteDesignerPage extends Component {
         // a.download = "Left.png"
         // a.click();
       } else if (shorten_OLPrior == "Right") {
-        const image2d = GetRightCase().toDataURL("image/png", 1.0);
+        const image2d = GetRightCase().toDataURL("image/png");
         sceneObjects.push({ "label_Type": "Right", "file": this.convertBase64ToImage(image2d, 'png', "Right") });
         // const image2d = GetRightCase().toDataURL("image/png", 1.0);
         // const a = document.createElement("a");
@@ -9027,7 +9027,7 @@ class PaletteDesignerPage extends Component {
         // a.download = "Right.png"
         // a.click();
       } else if (shorten_OLPrior == "Back") {
-        const image2d = GetBackCase().toDataURL("image/png", 1.0);
+        const image2d = GetBackCase().toDataURL("image/png");
         sceneObjects.push({ "label_Type": "Back", "file": this.convertBase64ToImage(image2d, 'png', "Back") });
         // const image2d = GetBackCase().toDataURL("image/png", 1.0);
         // const a = document.createElement("a");
@@ -9035,7 +9035,7 @@ class PaletteDesignerPage extends Component {
         // a.download = "Back.png"
         // a.click();
       } else if (shorten_OLPrior == "Top-Front") {
-        const image2d = GetTopFrontCase().toDataURL("image/png", 1.0);
+        const image2d = GetTopFrontCase().toDataURL("image/png");
         sceneObjects.push({ "label_Type": "Top-Front", "file": this.convertBase64ToImage(image2d, 'png', "Top-Front") });
         // const image2d = GetTopFrontCase().toDataURL("image/png", 1.0);
         // const a = document.createElement("a");
@@ -9043,7 +9043,7 @@ class PaletteDesignerPage extends Component {
         // a.download = "Top-Front.png"
         // a.click();
       } else if (shorten_OLPrior == "Top-Right") {
-        const image2d = GetTopRightCase().toDataURL("image/png", 1.0);
+        const image2d = GetTopRightCase().toDataURL("image/png");
         sceneObjects.push({ "label_Type": "Top-Right", "file": this.convertBase64ToImage(image2d, 'png', "Top-Right") });
         // const image2d = GetTopRightCase().toDataURL("image/png", 1.0);
         // const a = document.createElement("a");
@@ -9051,7 +9051,7 @@ class PaletteDesignerPage extends Component {
         // a.download = "Top-Right.png"
         // a.click();
       } else if (shorten_OLPrior == "Top-Left") {
-        const image2d = GetTopLeftCase().toDataURL("image/png", 1.0);
+        const image2d = GetTopLeftCase().toDataURL("image/png");
         sceneObjects.push({ "label_Type": "Top-Left", "file": this.convertBase64ToImage(image2d, 'png', "Top-Left") });
         // const image2d = GetTopLeftCase().toDataURL("image/png", 1.0);
         // const a = document.createElement("a");
@@ -9059,7 +9059,7 @@ class PaletteDesignerPage extends Component {
         // a.download = "Top-Left.png"
         // a.click();
       } else if (shorten_OLPrior == "Top-Back") {
-        const image2d = GetTopBackCase().toDataURL("image/png", 1.0);
+        const image2d = GetTopBackCase().toDataURL("image/png");
         sceneObjects.push({ "label_Type": "Top-Back", "file": this.convertBase64ToImage(image2d, 'png', "Top-Back") });
         // const image2d = GetTopBackCase().toDataURL("image/png", 1.0);
         // const a = document.createElement("a");
@@ -9067,7 +9067,7 @@ class PaletteDesignerPage extends Component {
         // a.download = "Top-Back.png"
         // a.click();
       } else if (shorten_OLPrior == "Front-Right") {
-        const image2d = GetFrontRightCase().toDataURL("image/png", 1.0);
+        const image2d = GetFrontRightCase().toDataURL("image/png");
         sceneObjects.push({ "label_Type": "Front-Right", "file": this.convertBase64ToImage(image2d, 'png', "Front-Right") });
         // const image2d = GetFrontRightCase().toDataURL("image/png", 1.0);
         // const a = document.createElement("a");
@@ -9075,7 +9075,7 @@ class PaletteDesignerPage extends Component {
         // a.download = "Front-Right.png"
         // a.click();
       } else if (shorten_OLPrior == "Front-Left") {
-        const image2d = GetFrontLeftCase().toDataURL("image/png", 1.0);
+        const image2d = GetFrontLeftCase().toDataURL("image/png");
         sceneObjects.push({ "label_Type": "Front-Left", "file": this.convertBase64ToImage(image2d, 'png', "Front-Left") });
         // const image2d = GetFrontLeftCase().toDataURL("image/png", 1.0);
         // const a = document.createElement("a");
@@ -9083,7 +9083,7 @@ class PaletteDesignerPage extends Component {
         // a.download = "Front-Left.png"
         // a.click();
       } else if (shorten_OLPrior == "Right-Back") {
-        const image2d = GetRightBackCase().toDataURL("image/png", 1.0);
+        const image2d = GetRightBackCase().toDataURL("image/png");
         sceneObjects.push({ "label_Type": "Right-Back", "file": this.convertBase64ToImage(image2d, 'png', "Right-Back") });
         // const image2d = GetRightBackCase().toDataURL("image/png", 1.0);
         // const a = document.createElement("a");

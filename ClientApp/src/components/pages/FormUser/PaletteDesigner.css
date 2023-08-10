@@ -394,4 +394,10 @@ section img {
     left: 50%;
     transform: translate(-50%, 50%);
 }
+.CaptureDiv
+{   
+    margin-top: 4000px;
+    z-index: 12;
+}
 
+  

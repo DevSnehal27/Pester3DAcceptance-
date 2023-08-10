@@ -56,7 +56,7 @@ const HomePage = () => {
           alt="DigiTran Solutions Logo"
           src={logo}
         />
-      </Col>
+      </Col>      
       <Col
         xs={12}
         sm={6}

@@ -661,8 +661,8 @@ namespace reactnet3.Controllers
                                     buffer = streamReader.ReadBytes((int)files[k].Length);
                                 }
                                 var EmptyCaseimage = iTextSharp.text.Image.GetInstance(buffer);
-                                EmptyCaseimage.ScalePercent(55f);
-                                float logoX2 = 165f;
+                                EmptyCaseimage.ScaleAbsolute(400f, 250f);
+                                float logoX2 = 220f;
                                 float logoY2 = doc.PageSize.Height - 10f -  EmptyCaseimage.ScaledHeight;
                                 EmptyCaseimage.SetAbsolutePosition(logoX2, logoY2);
                                 doc.Add(EmptyCaseimage);
@@ -675,7 +675,7 @@ namespace reactnet3.Controllers
                     
                     // Add case description heading
                     Paragraph caseDescriptionHeading = new Paragraph("Case Description:", subHeadingFont);
-                    caseDescriptionHeading.SpacingAfter = 40f;
+                    caseDescriptionHeading.SpacingAfter = 50f;
                     doc.Add(caseDescriptionHeading);
                     
                     // Create table
@@ -789,19 +789,19 @@ namespace reactnet3.Controllers
                                     buffer = streamReader.ReadBytes((int)files[j].Length);
                                 }
                                 var LabelCaseimage = iTextSharp.text.Image.GetInstance(buffer);
-                                LabelCaseimage.ScalePercent(55f);
-                                float logoX2 =165f;
+                                LabelCaseimage.ScaleAbsolute(400f, 250f);
+                                float logoX2 =220f;
                                 if(j==2||j==5||j==8||j==11||j==14)
                                 {
                                     float logoY2 = doc.PageSize.Height - 30f -  LabelCaseimage.ScaledHeight; 
                                     LabelCaseimage.SetAbsolutePosition(logoX2, logoY2);  
                                 }else if(j==3||j==6||j==9||j==12||j==15)
                                 {
-                                    float logoY2 = doc.PageSize.Height - 300f -  LabelCaseimage.ScaledHeight;
+                                    float logoY2 = doc.PageSize.Height - 275f -  LabelCaseimage.ScaledHeight;
                                     LabelCaseimage.SetAbsolutePosition(logoX2, logoY2);
                                 }
                                 else{
-                                    float logoY2 = doc.PageSize.Height - 550f -  LabelCaseimage.ScaledHeight;
+                                    float logoY2 = doc.PageSize.Height - 515f -  LabelCaseimage.ScaledHeight;
                                     LabelCaseimage.SetAbsolutePosition(logoX2, logoY2);
                                 }
                                 doc.Add(LabelCaseimage);
@@ -815,19 +815,19 @@ namespace reactnet3.Controllers
                                     buffer = streamReader.ReadBytes((int)files[j].Length);
                                 }
                                 var LabelCaseimage = iTextSharp.text.Image.GetInstance(buffer);
-                                LabelCaseimage.ScalePercent(50f);
-                                float logoX2 = 180f;
+                                LabelCaseimage.ScaleAbsolute(400f, 250f);
+                                float logoX2 = 220f;
                                 if(j==2||j==5||j==8||j==11||j==14)
                                 {
                                     float logoY2 = doc.PageSize.Height - 30f -  LabelCaseimage.ScaledHeight;
                                     LabelCaseimage.SetAbsolutePosition(logoX2, logoY2);
                                 }else if(j==3||j==6||j==9||j==12||j==15)
                                 {
-                                    float logoY2 = doc.PageSize.Height - 300f -  LabelCaseimage.ScaledHeight;
+                                    float logoY2 = doc.PageSize.Height - 275f -  LabelCaseimage.ScaledHeight;
                                     LabelCaseimage.SetAbsolutePosition(logoX2, logoY2);
                                 }
                                 else{
-                                    float logoY2 = doc.PageSize.Height - 550f -  LabelCaseimage.ScaledHeight;
+                                    float logoY2 = doc.PageSize.Height - 515f -  LabelCaseimage.ScaledHeight;
                                     LabelCaseimage.SetAbsolutePosition(logoX2, logoY2);
                                 }
                                 doc.Add(LabelCaseimage);
@@ -840,8 +840,8 @@ namespace reactnet3.Controllers
                                     buffer = streamReader.ReadBytes((int)files[j].Length);
                                 }
                                 var LabelCaseimage = iTextSharp.text.Image.GetInstance(buffer);
-                                LabelCaseimage.ScalePercent(50f);
-                                float logoX2 = 180f;
+                                LabelCaseimage.ScaleAbsolute(400f, 250f);
+                                float logoX2 = 220f;
 
                                 if(j==2||j==5||j==8||j==11||j==14)
                                 {
@@ -849,11 +849,11 @@ namespace reactnet3.Controllers
                                     LabelCaseimage.SetAbsolutePosition(logoX2, logoY2);
                                 }else if(j==3||j==6||j==9||j==12||j==15)
                                 {
-                                    float logoY2 = doc.PageSize.Height - 300f -  LabelCaseimage.ScaledHeight;
+                                    float logoY2 = doc.PageSize.Height - 275f -  LabelCaseimage.ScaledHeight;
                                     LabelCaseimage.SetAbsolutePosition(logoX2, logoY2);
                                 }
                                 else{
-                                    float logoY2 = doc.PageSize.Height - 550f -  LabelCaseimage.ScaledHeight;
+                                    float logoY2 = doc.PageSize.Height - 515f -  LabelCaseimage.ScaledHeight;
                                     LabelCaseimage.SetAbsolutePosition(logoX2, logoY2);
                                 }
                                 doc.Add(LabelCaseimage);
@@ -865,19 +865,19 @@ namespace reactnet3.Controllers
                                                 buffer = streamReader.ReadBytes((int)files[j].Length);
                                             }
                                                 var LabelCaseimage = iTextSharp.text.Image.GetInstance(buffer);
-                                                LabelCaseimage.ScalePercent(50f);
-                                                float logoX2 = 180f;
+                                                LabelCaseimage.ScaleAbsolute(400f, 250f);
+                                                float logoX2 = 220f;
                                                if(j==2||j==5||j==8||j==11||j==14)
                                                {
                                                   float logoY2 = doc.PageSize.Height - 30f -  LabelCaseimage.ScaledHeight;   
                                                   LabelCaseimage.SetAbsolutePosition(logoX2, logoY2);                                             
                                                }else if(j==3||j==6||j==9||j==12||j==15)
                                                {
-                                                 float logoY2 = doc.PageSize.Height - 300f -  LabelCaseimage.ScaledHeight;   
+                                                 float logoY2 = doc.PageSize.Height - 275f -  LabelCaseimage.ScaledHeight;   
                                                 LabelCaseimage.SetAbsolutePosition(logoX2, logoY2);   
                                                }
                                                else{                                                
-                                                float logoY2 = doc.PageSize.Height - 550f -  LabelCaseimage.ScaledHeight;  
+                                                float logoY2 = doc.PageSize.Height - 515f -  LabelCaseimage.ScaledHeight;  
                                                 LabelCaseimage.SetAbsolutePosition(logoX2, logoY2); 
                                                } 
                                                doc.Add(LabelCaseimage);
@@ -889,19 +889,19 @@ namespace reactnet3.Controllers
                                                 buffer = streamReader.ReadBytes((int)files[j].Length);
                                             }
                                                 var LabelCaseimage = iTextSharp.text.Image.GetInstance(buffer);
-                                                LabelCaseimage.ScalePercent(50f);
-                                                float logoX2 = 180f;
+                                                LabelCaseimage.ScaleAbsolute(400f, 250f);
+                                                float logoX2 = 220f;
                                                 if(j==2||j==5||j==8||j==11||j==14)
                                                {
                                                   float logoY2 = doc.PageSize.Height - 30f -  LabelCaseimage.ScaledHeight;   
                                                   LabelCaseimage.SetAbsolutePosition(logoX2, logoY2);                                             
                                                }else if(j==3||j==6||j==9||j==12||j==15)
                                                {
-                                                 float logoY2 = doc.PageSize.Height - 300f -  LabelCaseimage.ScaledHeight;   
+                                                 float logoY2 = doc.PageSize.Height - 275f -  LabelCaseimage.ScaledHeight;   
                                                 LabelCaseimage.SetAbsolutePosition(logoX2, logoY2);   
                                                }
                                                else{                                                
-                                                float logoY2 = doc.PageSize.Height - 550f -  LabelCaseimage.ScaledHeight;  
+                                                float logoY2 = doc.PageSize.Height - 515f -  LabelCaseimage.ScaledHeight;  
                                                 LabelCaseimage.SetAbsolutePosition(logoX2, logoY2); 
                                                } 
                                                doc.Add(LabelCaseimage);
@@ -913,19 +913,19 @@ namespace reactnet3.Controllers
                                                 buffer = streamReader.ReadBytes((int)files[j].Length);
                                             }
                                             var LabelCaseimage = iTextSharp.text.Image.GetInstance(buffer);
-                                            LabelCaseimage.ScalePercent(50f);
-                                             float logoX2 = 180f;
+                                            LabelCaseimage.ScaleAbsolute(400f, 250f);
+                                             float logoX2 = 220f;
                                                 if(j==2||j==5||j==8||j==11||j==14)
                                                {
                                                   float logoY2 = doc.PageSize.Height - 30f -  LabelCaseimage.ScaledHeight;   
                                                   LabelCaseimage.SetAbsolutePosition(logoX2, logoY2);                                             
                                                }else if(j==3||j==6||j==9||j==12||j==15)
                                                {
-                                                 float logoY2 = doc.PageSize.Height - 300f -  LabelCaseimage.ScaledHeight;   
+                                                 float logoY2 = doc.PageSize.Height - 275f -  LabelCaseimage.ScaledHeight;   
                                                 LabelCaseimage.SetAbsolutePosition(logoX2, logoY2);   
                                                }
                                                else{                                                
-                                                float logoY2 = doc.PageSize.Height - 550f -  LabelCaseimage.ScaledHeight;  
+                                                float logoY2 = doc.PageSize.Height - 515f -  LabelCaseimage.ScaledHeight;  
                                                 LabelCaseimage.SetAbsolutePosition(logoX2, logoY2); 
                                                } 
                                                doc.Add(LabelCaseimage);
@@ -937,19 +937,19 @@ namespace reactnet3.Controllers
                                                 buffer = streamReader.ReadBytes((int)files[j].Length);
                                             }
                                                 var LabelCaseimage = iTextSharp.text.Image.GetInstance(buffer);
-                                                LabelCaseimage.ScalePercent(50f);
-                                                float logoX2 = 180f;
+                                                LabelCaseimage.ScaleAbsolute(400f, 250f);
+                                                float logoX2 = 220f;
                                                  if(j==2||j==5||j==8||j==11||j==14)
                                                {
                                                   float logoY2 = doc.PageSize.Height - 30f -  LabelCaseimage.ScaledHeight;   
                                                   LabelCaseimage.SetAbsolutePosition(logoX2, logoY2);                                             
                                                }else if(j==3||j==6||j==9||j==12||j==15)
                                                {
-                                                 float logoY2 = doc.PageSize.Height - 300f -  LabelCaseimage.ScaledHeight;   
+                                                 float logoY2 = doc.PageSize.Height - 275f -  LabelCaseimage.ScaledHeight;   
                                                 LabelCaseimage.SetAbsolutePosition(logoX2, logoY2);   
                                                }
                                                else{                                                
-                                                float logoY2 = doc.PageSize.Height - 550f -  LabelCaseimage.ScaledHeight;  
+                                                float logoY2 = doc.PageSize.Height - 515f -  LabelCaseimage.ScaledHeight;  
                                                 LabelCaseimage.SetAbsolutePosition(logoX2, logoY2); 
                                                } 
                                                doc.Add(LabelCaseimage);
@@ -961,19 +961,19 @@ namespace reactnet3.Controllers
                                                 buffer = streamReader.ReadBytes((int)files[j].Length);
                                             }
                                                 var LabelCaseimage = iTextSharp.text.Image.GetInstance(buffer);
-                                                LabelCaseimage.ScalePercent(50f);
-                                                float logoX2 = 180f;
+                                                LabelCaseimage.ScaleAbsolute(400f, 250f);
+                                                float logoX2 = 220f;
                                                 if(j==2||j==5||j==8||j==11||j==14)
                                                {
                                                   float logoY2 = doc.PageSize.Height - 30f -  LabelCaseimage.ScaledHeight;   
                                                   LabelCaseimage.SetAbsolutePosition(logoX2, logoY2);                                             
                                                }else if(j==3||j==6||j==9||j==12||j==15)
                                                {
-                                                 float logoY2 = doc.PageSize.Height - 300f -  LabelCaseimage.ScaledHeight;   
+                                                 float logoY2 = doc.PageSize.Height - 275f -  LabelCaseimage.ScaledHeight;   
                                                 LabelCaseimage.SetAbsolutePosition(logoX2, logoY2);   
                                                }
                                                else{                                                
-                                                float logoY2 = doc.PageSize.Height - 550f -  LabelCaseimage.ScaledHeight;  
+                                                float logoY2 = doc.PageSize.Height - 515f -  LabelCaseimage.ScaledHeight;  
                                                 LabelCaseimage.SetAbsolutePosition(logoX2, logoY2); 
                                                } 
                      
@@ -988,20 +988,20 @@ namespace reactnet3.Controllers
                                                 buffer = streamReader.ReadBytes((int)files[j].Length);
                                             }
                                                var LabelCaseimage = iTextSharp.text.Image.GetInstance(buffer);
-                                            LabelCaseimage.ScalePercent(50f);
+                                            LabelCaseimage.ScaleAbsolute(400f, 250f);
                                             
-                                              float logoX2 = 180f;
+                                              float logoX2 = 220f;
                                                 if(j==2||j==5||j==8||j==11||j==14)
                                                {
                                                   float logoY2 = doc.PageSize.Height - 30f -  LabelCaseimage.ScaledHeight;   
                                                   LabelCaseimage.SetAbsolutePosition(logoX2, logoY2);                                             
                                                }else if(j==3||j==6||j==9||j==12||j==15)
                                                {
-                                                 float logoY2 = doc.PageSize.Height - 300f -  LabelCaseimage.ScaledHeight;   
+                                                 float logoY2 = doc.PageSize.Height - 275f -  LabelCaseimage.ScaledHeight;   
                                                 LabelCaseimage.SetAbsolutePosition(logoX2, logoY2);   
                                                }
                                                else{                                                
-                                                float logoY2 = doc.PageSize.Height - 550f -  LabelCaseimage.ScaledHeight;  
+                                                float logoY2 = doc.PageSize.Height - 515f -  LabelCaseimage.ScaledHeight;  
                                                 LabelCaseimage.SetAbsolutePosition(logoX2, logoY2); 
                                                } 
                      
@@ -1015,20 +1015,20 @@ namespace reactnet3.Controllers
                                                 buffer = streamReader.ReadBytes((int)files[j].Length);
                                             }
                                                 var LabelCaseimage = iTextSharp.text.Image.GetInstance(buffer);
-                                                LabelCaseimage.ScalePercent(50f);
+                                                LabelCaseimage.ScaleAbsolute(400f, 250f);
                                               
-                                               float logoX2 = 180f;
+                                               float logoX2 = 220f;
                                                if(j==2||j==5||j==8||j==11||j==14)
                                                {
                                                   float logoY2 = doc.PageSize.Height - 30f -  LabelCaseimage.ScaledHeight;   
                                                   LabelCaseimage.SetAbsolutePosition(logoX2, logoY2);                                             
                                                }else if(j==3||j==6||j==9||j==12||j==15)
                                                {
-                                                 float logoY2 = doc.PageSize.Height - 300f -  LabelCaseimage.ScaledHeight;   
+                                                 float logoY2 = doc.PageSize.Height - 275f -  LabelCaseimage.ScaledHeight;   
                                                 LabelCaseimage.SetAbsolutePosition(logoX2, logoY2);   
                                                }
                                                else{                                                
-                                                float logoY2 = doc.PageSize.Height - 550f -  LabelCaseimage.ScaledHeight;  
+                                                float logoY2 = doc.PageSize.Height - 515f -  LabelCaseimage.ScaledHeight;  
                                                 LabelCaseimage.SetAbsolutePosition(logoX2, logoY2); 
                                                }                    
                                                
@@ -1041,19 +1041,19 @@ namespace reactnet3.Controllers
                                                 buffer = streamReader.ReadBytes((int)files[j].Length);
                                             }
                                                 var LabelCaseimage = iTextSharp.text.Image.GetInstance(buffer);
-                                                LabelCaseimage.ScalePercent(50f);                                                
-                                                float logoX2 = 180f;
+                                                LabelCaseimage.ScaleAbsolute(400f, 250f);                                                
+                                                float logoX2 = 220f;
                                                 if(j==2||j==5||j==8||j==11||j==14)
                                                {
                                                   float logoY2 = doc.PageSize.Height - 30f -  LabelCaseimage.ScaledHeight;   
                                                   LabelCaseimage.SetAbsolutePosition(logoX2, logoY2);                                             
                                                }else if(j==3||j==6||j==9||j==12||j==15)
                                                {
-                                                 float logoY2 = doc.PageSize.Height - 300f -  LabelCaseimage.ScaledHeight;   
+                                                 float logoY2 = doc.PageSize.Height - 275f -  LabelCaseimage.ScaledHeight;   
                                                 LabelCaseimage.SetAbsolutePosition(logoX2, logoY2);   
                                                }
                                                else{                                                
-                                                float logoY2 = doc.PageSize.Height - 550f -  LabelCaseimage.ScaledHeight;  
+                                                float logoY2 = doc.PageSize.Height - 515f -  LabelCaseimage.ScaledHeight;  
                                                 LabelCaseimage.SetAbsolutePosition(logoX2, logoY2); 
                                                }                     
                                                
@@ -1066,19 +1066,19 @@ namespace reactnet3.Controllers
                                                 buffer = streamReader.ReadBytes((int)files[j].Length);
                                             }
                                                 var LabelCaseimage = iTextSharp.text.Image.GetInstance(buffer);
-                                                LabelCaseimage.ScalePercent(50f);
-                                                float logoX2 = 180f;
+                                                LabelCaseimage.ScaleAbsolute(400f, 250f);
+                                                float logoX2 = 220f;
                                                if(j==2||j==5||j==8||j==11||j==14)
                                                {
                                                   float logoY2 = doc.PageSize.Height - 30f -  LabelCaseimage.ScaledHeight;   
                                                   LabelCaseimage.SetAbsolutePosition(logoX2, logoY2);                                             
                                                }else if(j==3||j==6||j==9||j==12||j==15)
                                                {
-                                                 float logoY2 = doc.PageSize.Height - 300f -  LabelCaseimage.ScaledHeight;   
+                                                 float logoY2 = doc.PageSize.Height - 275f -  LabelCaseimage.ScaledHeight;   
                                                 LabelCaseimage.SetAbsolutePosition(logoX2, logoY2);   
                                                }
                                                else{                                                
-                                                float logoY2 = doc.PageSize.Height - 550f -  LabelCaseimage.ScaledHeight;  
+                                                float logoY2 = doc.PageSize.Height - 515f -  LabelCaseimage.ScaledHeight;  
                                                 LabelCaseimage.SetAbsolutePosition(logoX2, logoY2); 
                                                }                   
                                                
@@ -1092,19 +1092,19 @@ namespace reactnet3.Controllers
                                                 buffer = streamReader.ReadBytes((int)files[j].Length);
                                             }
                                                 var LabelCaseimage = iTextSharp.text.Image.GetInstance(buffer);
-                                                LabelCaseimage.ScalePercent(50f);
-                                                float logoX2 = 180f;
+                                                LabelCaseimage.ScaleAbsolute(400f, 250f);
+                                                float logoX2 =220f;
                                               if(j==2||j==5||j==8||j==11||j==14)
                                                {
                                                   float logoY2 = doc.PageSize.Height - 30f -  LabelCaseimage.ScaledHeight;   
                                                   LabelCaseimage.SetAbsolutePosition(logoX2, logoY2);                                             
                                                }else if(j==3||j==6||j==9||j==12||j==15)
                                                {
-                                                 float logoY2 = doc.PageSize.Height - 300f -  LabelCaseimage.ScaledHeight;   
+                                                 float logoY2 = doc.PageSize.Height - 275f -  LabelCaseimage.ScaledHeight;   
                                                 LabelCaseimage.SetAbsolutePosition(logoX2, logoY2);   
                                                }
                                                else{                                                
-                                                float logoY2 = doc.PageSize.Height - 550f -  LabelCaseimage.ScaledHeight;  
+                                                float logoY2 = doc.PageSize.Height - 515f -  LabelCaseimage.ScaledHeight;  
                                                 LabelCaseimage.SetAbsolutePosition(logoX2, logoY2); 
                                                }                     
                                                
@@ -1119,6 +1119,12 @@ namespace reactnet3.Controllers
                         // labelDescriptionHeading.SpacingAfter = 30f;
                         doc.Add(labelDescriptionHeading);
                         }
+                      if(labelCount%3==0&&labelCount!= 0)
+                      {
+                       Paragraph labelDescriptionHeading = new Paragraph("   ");
+                        doc.Add(labelDescriptionHeading);
+                      }
+
 
                         labelCount++;
                         Paragraph SpaceLabel = new Paragraph("     ", subHeadingFont);
@@ -1268,7 +1274,7 @@ namespace reactnet3.Controllers
 
                         doc.NewPage();
                         Paragraph palleteDescriptionHeading = new Paragraph("Palette Description:", subHeadingFont);
-                        palleteDescriptionHeading.SpacingAfter = 30f;
+                        palleteDescriptionHeading.SpacingAfter = 50f;
                         doc.Add(palleteDescriptionHeading);
                         // Create table
                         PdfPTable table1 = new PdfPTable(2); // Number of columns: 3
@@ -1416,11 +1422,11 @@ table1.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
                                     buffer = streamReader.ReadBytes((int)files[k].Length);
                                 }
                                     var Palletimage = iTextSharp.text.Image.GetInstance(buffer);
-                                    Palletimage.ScalePercent(50f);
+                                    Palletimage.ScaleAbsolute(400f, 250f);
 
-                                    float logoX2 = 190f;
+                                    float logoX2 = 240f;
 
-                                    float logoY2 = doc.PageSize.Height - 50f -  Palletimage.ScaledHeight;
+                                    float logoY2 = doc.PageSize.Height -75f -  Palletimage.ScaledHeight;
 
                                     Palletimage.SetAbsolutePosition(logoX2, logoY2);
                                     doc.Add(Palletimage);
@@ -1832,33 +1838,54 @@ table1.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
         }
 
         [HttpGet("authInformate")]
-        public RedirectResult GetUrl(string username, string usergroup, string role, string lcid)
-        {     
-            username = username;
-            usergroup = usergroup;
-            role = role;
-            lcid = lcid;
-            Console.WriteLine(username);
-            Console.WriteLine(usergroup);
-            Console.WriteLine(role);
-            Console.WriteLine(lcid);
-            try{
-                JObject auth = new JObject(
-                new JProperty("username", username),
-                new JProperty("usergroup", usergroup),
-                new JProperty("role", role),
-                new JProperty("lcid", lcid));
-                string filepath =  Path.Combine(Directory.GetCurrentDirectory(), "auth.json");                      
-                System.IO.File.WriteAllText(filepath, auth.ToString());
-                Thread.Sleep(5000);
-                }
-                catch(Exception e){
-                    throw e;
-            }           
-            return Redirect("/"); // redirects to internal url
-            // return RedirectPermanent("https://localhost:5001/"); //in local PC            
-            //return RedirectPermanent("http://3.129.246.13:5000/"); //in AWS
+       public RedirectResult GetUrl(string username, string usergroup, string role, string lcid)
+     {
+      try
+      {
+        // Create the JSON object
+        JObject auth = new JObject(
+            new JProperty("username", username),
+            new JProperty("usergroup", usergroup),
+            new JProperty("role", role),
+            new JProperty("lcid", lcid));
+
+        string filePath = Path.Combine(Directory.GetCurrentDirectory(), "auth.json");
+
+        // Check if the file already exists, and delete it if it does
+        if (System.IO.File.Exists(filePath))
+        {
+            try
+            {
+               System.IO.File .Delete(filePath);
+            }
+            catch (Exception e)
+            {
+                // Handle any exceptions related to file deletion here if needed
+                throw e;
+            }
         }
+
+        try
+        {
+            System.IO.File.WriteAllText(filePath, auth.ToString());
+            Thread.Sleep(5000);
+         
+         
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+
+        // Redirect to the root URL ("/")
+        return Redirect("/");
+    }
+    catch (Exception e)
+    {
+        // Handle any other exceptions here if needed
+        throw e;
+    }
+}
 
         // GET: api/Threed/5
         [HttpGet("{id}")]

@@ -3334,26 +3334,26 @@ class FormUserPage1 extends Component {
     if (this.currLabelType === "Top-Front") {
       //arrow
       //Top
-      var arrowPosmapx = this.map(this.globalScalex, 10, 1000, -0.09, -9.5)
-      var arrowPosmapy = this.map(this.globalScaley, 10, 1000, 0.11, 10.5)
-      var arrowPosmapz = this.map(this.globalScalez, 10, 1000, -0.08, -9.4)
-      var arrowPos = new THREE.Vector3(arrowPosmapx, arrowPosmapy, arrowPosmapz);
+      // var arrowPosmapx = this.map(this.globalScalex, 10, 1000, -0.09, -9.5)
+      // var arrowPosmapy = this.map(this.globalScaley, 10, 1000, 0.11, 10.5)
+      // var arrowPosmapz = this.map(this.globalScalez, 10, 1000, -0.08, -9.4)
+      // var arrowPos = new THREE.Vector3(arrowPosmapx, arrowPosmapy, arrowPosmapz);
 
-      var length1 = this.map(this.setfront1, 10, 1000, 0.1, 9.5)
-      var length2 = this.map(this.setfront1, 10, 1000, 0.1, 9.5)
+      // var length1 = this.map(this.setfront1, 10, 1000, 0.1, 9.5)
+      // var length2 = this.map(this.setfront1, 10, 1000, 0.1, 9.5)
 
-      var headlength1 = this.map(this.setfront1, 10, 1000, 0.04, 4)
-      var headlength2 = this.map(this.setfront1, 10, 1000, 0.04, 4)
+      // var headlength1 = this.map(this.setfront1, 10, 1000, 0.04, 4)
+      // var headlength2 = this.map(this.setfront1, 10, 1000, 0.04, 4)
 
-      var headwidth1 = this.map(this.setfront1, 10, 1000, 0.015, 1.5)
-      var headwidth2 = this.map(this.setfront1, 10, 1000, 0.015, 1.5)
+      // var headwidth1 = this.map(this.setfront1, 10, 1000, 0.015, 1.5)
+      // var headwidth2 = this.map(this.setfront1, 10, 1000, 0.015, 1.5)
 
 
-      this.arrowHelperX = new THREE.ArrowHelper(new THREE.Vector3(0, 0, 1), arrowPos, length1, 0X8F00FF, headlength1, headwidth1);
-      this.arrowHelperX.line = 35;
-      this.arrowHelperY = new THREE.ArrowHelper(new THREE.Vector3(1, 0, 0), arrowPos, length2, 0XFFA500, headlength2, headwidth2);
-      this.scene.add(this.arrowHelperX);
-      this.scene.add(this.arrowHelperY);
+      // this.arrowHelperX = new THREE.ArrowHelper(new THREE.Vector3(0, 0, 1), arrowPos, length1, 0X8F00FF, headlength1, headwidth1);
+      // this.arrowHelperX.line = 35;
+      // this.arrowHelperY = new THREE.ArrowHelper(new THREE.Vector3(1, 0, 0), arrowPos, length2, 0XFFA500, headlength2, headwidth2);
+      // this.scene.add(this.arrowHelperX);
+      // this.scene.add(this.arrowHelperY);
 
       //front
       var arrowPosmapx = this.map(this.globalScalex, 10, 1000, -0.09, -9.5)
@@ -3417,26 +3417,26 @@ class FormUserPage1 extends Component {
 
     if (this.currLabelType === "Top-Back") {
       //Top
-      var arrowPosmapx = this.map(this.globalScalex, 10, 1000, -0.09, -9.5)
-      var arrowPosmapy = this.map(this.globalScaley, 10, 1000, 0.11, 10.5)
-      var arrowPosmapz = this.map(this.globalScalez, 10, 1000, -0.08, -9.4)
-      var arrowPos = new THREE.Vector3(arrowPosmapx, arrowPosmapy, arrowPosmapz);
+      // var arrowPosmapx = this.map(this.globalScalex, 10, 1000, -0.09, -9.5)
+      // var arrowPosmapy = this.map(this.globalScaley, 10, 1000, 0.11, 10.5)
+      // var arrowPosmapz = this.map(this.globalScalez, 10, 1000, -0.08, -9.4)
+      // var arrowPos = new THREE.Vector3(arrowPosmapx, arrowPosmapy, arrowPosmapz);
 
-      var length1 = this.map(this.setfront1, 10, 1000, 0.1, 9.5)
-      var length2 = this.map(this.setfront1, 10, 1000, 0.1, 9.5)
+      // var length1 = this.map(this.setfront1, 10, 1000, 0.1, 9.5)
+      // var length2 = this.map(this.setfront1, 10, 1000, 0.1, 9.5)
 
-      var headlength1 = this.map(this.setfront1, 10, 1000, 0.04, 4)
-      var headlength2 = this.map(this.setfront1, 10, 1000, 0.04, 4)
+      // var headlength1 = this.map(this.setfront1, 10, 1000, 0.04, 4)
+      // var headlength2 = this.map(this.setfront1, 10, 1000, 0.04, 4)
 
-      var headwidth1 = this.map(this.setfront1, 10, 1000, 0.015, 1.5)
-      var headwidth2 = this.map(this.setfront1, 10, 1000, 0.015, 1.5)
+      // var headwidth1 = this.map(this.setfront1, 10, 1000, 0.015, 1.5)
+      // var headwidth2 = this.map(this.setfront1, 10, 1000, 0.015, 1.5)
 
 
-      this.arrowHelperX = new THREE.ArrowHelper(new THREE.Vector3(0, 0, 1), arrowPos, length1, 0X8F00FF, headlength1, headwidth1);
-      this.arrowHelperX.line = 35;
-      this.arrowHelperY = new THREE.ArrowHelper(new THREE.Vector3(1, 0, 0), arrowPos, length2, 0XFFA500, headlength2, headwidth2);
-      this.scene.add(this.arrowHelperX);
-      this.scene.add(this.arrowHelperY);
+      // this.arrowHelperX = new THREE.ArrowHelper(new THREE.Vector3(0, 0, 1), arrowPos, length1, 0X8F00FF, headlength1, headwidth1);
+      // this.arrowHelperX.line = 35;
+      // this.arrowHelperY = new THREE.ArrowHelper(new THREE.Vector3(1, 0, 0), arrowPos, length2, 0XFFA500, headlength2, headwidth2);
+      // this.scene.add(this.arrowHelperX);
+      // this.scene.add(this.arrowHelperY);
 
       //back
       var arrowPosmapx = this.map(this.globalScalex, 10, 1000, 0.09, 9.5)
@@ -3500,26 +3500,26 @@ class FormUserPage1 extends Component {
 
     if (this.currLabelType === "Top-Right") {
       //Top
-      var arrowPosmapx = this.map(this.globalScalex, 10, 1000, -0.09, -9.5)
-      var arrowPosmapy = this.map(this.globalScaley, 10, 1000, 0.11, 10.5)
-      var arrowPosmapz = this.map(this.globalScalez, 10, 1000, -0.08, -9.4)
-      var arrowPos = new THREE.Vector3(arrowPosmapx, arrowPosmapy, arrowPosmapz);
+      // var arrowPosmapx = this.map(this.globalScalex, 10, 1000, -0.09, -9.5)
+      // var arrowPosmapy = this.map(this.globalScaley, 10, 1000, 0.11, 10.5)
+      // var arrowPosmapz = this.map(this.globalScalez, 10, 1000, -0.08, -9.4)
+      // var arrowPos = new THREE.Vector3(arrowPosmapx, arrowPosmapy, arrowPosmapz);
 
-      var length1 = this.map(this.setfront1, 10, 1000, 0.1, 9.5)
-      var length2 = this.map(this.setfront1, 10, 1000, 0.1, 9.5)
+      // var length1 = this.map(this.setfront1, 10, 1000, 0.1, 9.5)
+      // var length2 = this.map(this.setfront1, 10, 1000, 0.1, 9.5)
 
-      var headlength1 = this.map(this.setfront1, 10, 1000, 0.04, 4)
-      var headlength2 = this.map(this.setfront1, 10, 1000, 0.04, 4)
+      // var headlength1 = this.map(this.setfront1, 10, 1000, 0.04, 4)
+      // var headlength2 = this.map(this.setfront1, 10, 1000, 0.04, 4)
 
-      var headwidth1 = this.map(this.setfront1, 10, 1000, 0.015, 1.5)
-      var headwidth2 = this.map(this.setfront1, 10, 1000, 0.015, 1.5)
+      // var headwidth1 = this.map(this.setfront1, 10, 1000, 0.015, 1.5)
+      // var headwidth2 = this.map(this.setfront1, 10, 1000, 0.015, 1.5)
 
 
-      this.arrowHelperX = new THREE.ArrowHelper(new THREE.Vector3(0, 0, 1), arrowPos, length1, 0XFFA500, headlength1, headwidth1);
-      this.arrowHelperX.line = 35;
-      this.arrowHelperY = new THREE.ArrowHelper(new THREE.Vector3(1, 0, 0), arrowPos, length2, 0X8F00FF, headlength2, headwidth2);
-      this.scene.add(this.arrowHelperX);
-      this.scene.add(this.arrowHelperY);
+      // this.arrowHelperX = new THREE.ArrowHelper(new THREE.Vector3(0, 0, 1), arrowPos, length1, 0XFFA500, headlength1, headwidth1);
+      // this.arrowHelperX.line = 35;
+      // this.arrowHelperY = new THREE.ArrowHelper(new THREE.Vector3(1, 0, 0), arrowPos, length2, 0X8F00FF, headlength2, headwidth2);
+      // this.scene.add(this.arrowHelperX);
+      // this.scene.add(this.arrowHelperY);
 
       //Right
       var arrowPosmapx = this.map(this.globalScalex, 10, 1000, -0.11, -10.4)
@@ -3592,26 +3592,26 @@ class FormUserPage1 extends Component {
 
 
     if (this.currLabelType === "Top-Left") {
-      var arrowPosmapx = this.map(this.globalScalex, 10, 1000, -0.09, -9.5)
-      var arrowPosmapy = this.map(this.globalScaley, 10, 1000, 0.11, 10.5)
-      var arrowPosmapz = this.map(this.globalScalez, 10, 1000, -0.08, -9.4)
-      var arrowPos = new THREE.Vector3(arrowPosmapx, arrowPosmapy, arrowPosmapz);
+      // var arrowPosmapx = this.map(this.globalScalex, 10, 1000, -0.09, -9.5)
+      // var arrowPosmapy = this.map(this.globalScaley, 10, 1000, 0.11, 10.5)
+      // var arrowPosmapz = this.map(this.globalScalez, 10, 1000, -0.08, -9.4)
+      // var arrowPos = new THREE.Vector3(arrowPosmapx, arrowPosmapy, arrowPosmapz);
 
-      var length1 = this.map(this.setfront1, 10, 1000, 0.1, 9.5)
-      var length2 = this.map(this.setfront1, 10, 1000, 0.1, 9.5)
+      // var length1 = this.map(this.setfront1, 10, 1000, 0.1, 9.5)
+      // var length2 = this.map(this.setfront1, 10, 1000, 0.1, 9.5)
 
-      var headlength1 = this.map(this.setfront1, 10, 1000, 0.04, 4)
-      var headlength2 = this.map(this.setfront1, 10, 1000, 0.04, 4)
+      // var headlength1 = this.map(this.setfront1, 10, 1000, 0.04, 4)
+      // var headlength2 = this.map(this.setfront1, 10, 1000, 0.04, 4)
 
-      var headwidth1 = this.map(this.setfront1, 10, 1000, 0.015, 1.5)
-      var headwidth2 = this.map(this.setfront1, 10, 1000, 0.015, 1.5)
+      // var headwidth1 = this.map(this.setfront1, 10, 1000, 0.015, 1.5)
+      // var headwidth2 = this.map(this.setfront1, 10, 1000, 0.015, 1.5)
 
 
-      this.arrowHelperX4 = new THREE.ArrowHelper(new THREE.Vector3(0, 0, 1), arrowPos, length1, 0XFFA500, headlength1, headwidth1);
-      this.arrowHelperX4.line = 35;
-      this.arrowHelperY4 = new THREE.ArrowHelper(new THREE.Vector3(1, 0, 0), arrowPos, length2, 0X8F00FF, headlength2, headwidth2);
-      this.scene.add(this.arrowHelperX4);
-      this.scene.add(this.arrowHelperY4);
+      // this.arrowHelperX4 = new THREE.ArrowHelper(new THREE.Vector3(0, 0, 1), arrowPos, length1, 0XFFA500, headlength1, headwidth1);
+      // this.arrowHelperX4.line = 35;
+      // this.arrowHelperY4 = new THREE.ArrowHelper(new THREE.Vector3(1, 0, 0), arrowPos, length2, 0X8F00FF, headlength2, headwidth2);
+      // this.scene.add(this.arrowHelperX4);
+      // this.scene.add(this.arrowHelperY4);
 
       //Left
       var arrowPosmapx = this.map(this.globalScalex, 10, 1000, 0.11, 10.4)
@@ -3687,26 +3687,26 @@ class FormUserPage1 extends Component {
     if (this.currLabelType === "Front-Right") {
       //arrow
       //Front
-      var arrowPosmapx = this.map(this.globalScalex, 10, 1000, -0.09, -9.5)
-      var arrowPosmapy = this.map(this.globalScaley, 10, 1000, -0.08, -9)
-      var arrowPosmapz = this.map(this.globalScalez, 10, 1000, 0.11, 11)
-      var arrowPos = new THREE.Vector3(arrowPosmapx, arrowPosmapy, arrowPosmapz);
+      // var arrowPosmapx = this.map(this.globalScalex, 10, 1000, -0.09, -9.5)
+      // var arrowPosmapy = this.map(this.globalScaley, 10, 1000, -0.08, -9)
+      // var arrowPosmapz = this.map(this.globalScalez, 10, 1000, 0.11, 11)
+      // var arrowPos = new THREE.Vector3(arrowPosmapx, arrowPosmapy, arrowPosmapz);
 
-      var length1 = this.map(this.setfront, 10, 1000, 0.1, 9.5)
-      var length2 = this.map(this.setfront, 10, 1000, 0.1, 9.5)
+      // var length1 = this.map(this.setfront, 10, 1000, 0.1, 9.5)
+      // var length2 = this.map(this.setfront, 10, 1000, 0.1, 9.5)
 
-      var headlength1 = this.map(this.setfront, 10, 1000, 0.04, 4)
-      var headlength2 = this.map(this.setfront, 10, 1000, 0.04, 4)
+      // var headlength1 = this.map(this.setfront, 10, 1000, 0.04, 4)
+      // var headlength2 = this.map(this.setfront, 10, 1000, 0.04, 4)
 
-      var headwidth1 = this.map(this.setfront, 10, 1000, 0.015, 1.5)
-      var headwidth2 = this.map(this.setfront, 10, 1000, 0.015, 1.5)
+      // var headwidth1 = this.map(this.setfront, 10, 1000, 0.015, 1.5)
+      // var headwidth2 = this.map(this.setfront, 10, 1000, 0.015, 1.5)
 
 
-      this.arrowHelperX = new THREE.ArrowHelper(new THREE.Vector3(1, 0, 0), arrowPos, length1, 0XFFA500, headlength1, headwidth1);
-      this.arrowHelperX.line = 35;
-      this.arrowHelperY = new THREE.ArrowHelper(new THREE.Vector3(0, 1, 0), arrowPos, length2, 0X8F00FF, headlength2, headwidth2);
-      this.scene.add(this.arrowHelperX);
-      this.scene.add(this.arrowHelperY);
+      // this.arrowHelperX = new THREE.ArrowHelper(new THREE.Vector3(1, 0, 0), arrowPos, length1, 0XFFA500, headlength1, headwidth1);
+      // this.arrowHelperX.line = 35;
+      // this.arrowHelperY = new THREE.ArrowHelper(new THREE.Vector3(0, 1, 0), arrowPos, length2, 0X8F00FF, headlength2, headwidth2);
+      // this.scene.add(this.arrowHelperX);
+      // this.scene.add(this.arrowHelperY);
 
       //Right
       var arrowPosmapx = this.map(this.globalScalex, 10, 1000, -0.11, -10.4)
@@ -3782,26 +3782,26 @@ class FormUserPage1 extends Component {
     if (this.currLabelType === "Right-Back") {
 
       //Right
-      var arrowPosmapx = this.map(this.globalScalex, 10, 1000, -0.11, -10.4)
-      var arrowPosmapy = this.map(this.globalScaley, 10, 1000, -0.08, -9.2)
-      var arrowPosmapz = this.map(this.globalScalez, 10, 1000, -0.09, -9.5)
-      var arrowPos = new THREE.Vector3(arrowPosmapx, arrowPosmapy, arrowPosmapz);
+      // var arrowPosmapx = this.map(this.globalScalex, 10, 1000, -0.11, -10.4)
+      // var arrowPosmapy = this.map(this.globalScaley, 10, 1000, -0.08, -9.2)
+      // var arrowPosmapz = this.map(this.globalScalez, 10, 1000, -0.09, -9.5)
+      // var arrowPos = new THREE.Vector3(arrowPosmapx, arrowPosmapy, arrowPosmapz);
 
-      var length1 = this.map(this.setfront2, 10, 1000, 0.1, 9.5)
-      var length2 = this.map(this.setfront2, 10, 1000, 0.1, 9.5)
+      // var length1 = this.map(this.setfront2, 10, 1000, 0.1, 9.5)
+      // var length2 = this.map(this.setfront2, 10, 1000, 0.1, 9.5)
 
-      var headlength1 = this.map(this.setfront2, 10, 1000, 0.04, 4)
-      var headlength2 = this.map(this.setfront2, 10, 1000, 0.04, 4)
+      // var headlength1 = this.map(this.setfront2, 10, 1000, 0.04, 4)
+      // var headlength2 = this.map(this.setfront2, 10, 1000, 0.04, 4)
 
-      var headwidth1 = this.map(this.setfront2, 10, 1000, 0.015, 1.5)
-      var headwidth2 = this.map(this.setfront2, 10, 1000, 0.015, 1.5)
+      // var headwidth1 = this.map(this.setfront2, 10, 1000, 0.015, 1.5)
+      // var headwidth2 = this.map(this.setfront2, 10, 1000, 0.015, 1.5)
 
 
-      this.arrowHelperX = new THREE.ArrowHelper(new THREE.Vector3(0, 0, 1), arrowPos, length1, 0XFFA500, headlength1, headwidth1);
-      this.arrowHelperX.line = 35;
-      this.arrowHelperY = new THREE.ArrowHelper(new THREE.Vector3(0, 1, 0), arrowPos, length2, 0X8F00FF, headlength2, headwidth2);
-      this.scene.add(this.arrowHelperX);
-      this.scene.add(this.arrowHelperY);
+      // this.arrowHelperX = new THREE.ArrowHelper(new THREE.Vector3(0, 0, 1), arrowPos, length1, 0XFFA500, headlength1, headwidth1);
+      // this.arrowHelperX.line = 35;
+      // this.arrowHelperY = new THREE.ArrowHelper(new THREE.Vector3(0, 1, 0), arrowPos, length2, 0X8F00FF, headlength2, headwidth2);
+      // this.scene.add(this.arrowHelperX);
+      // this.scene.add(this.arrowHelperY);
 
       //Back
       var arrowPosmapx = this.map(this.globalScalex, 10, 1000, 0.09, 9.5)
@@ -3899,26 +3899,26 @@ class FormUserPage1 extends Component {
       this.scene.add(this.arrowHelperY);
 
       //Left
-      var arrowPosmapx = this.map(this.globalScalex, 10, 1000, 0.11, 10.4)
-      var arrowPosmapy = this.map(this.globalScaley, 10, 1000, -0.08, -9.2)
-      var arrowPosmapz = this.map(this.globalScalez, 10, 1000, 0.09, 9.5)
-      var arrowPos = new THREE.Vector3(arrowPosmapx, arrowPosmapy, arrowPosmapz);
+      // var arrowPosmapx = this.map(this.globalScalex, 10, 1000, 0.11, 10.4)
+      // var arrowPosmapy = this.map(this.globalScaley, 10, 1000, -0.08, -9.2)
+      // var arrowPosmapz = this.map(this.globalScalez, 10, 1000, 0.09, 9.5)
+      // var arrowPos = new THREE.Vector3(arrowPosmapx, arrowPosmapy, arrowPosmapz);
 
-      var length1 = this.map(this.setfront3, 10, 1000, 0.1, 9.5)
-      var length2 = this.map(this.setfront3, 10, 1000, 0.1, 9.5)
+      // var length1 = this.map(this.setfront3, 10, 1000, 0.1, 9.5)
+      // var length2 = this.map(this.setfront3, 10, 1000, 0.1, 9.5)
 
-      var headlength1 = this.map(this.setfront3, 10, 1000, 0.04, 4)
-      var headlength2 = this.map(this.setfront3, 10, 1000, 0.04, 4)
+      // var headlength1 = this.map(this.setfront3, 10, 1000, 0.04, 4)
+      // var headlength2 = this.map(this.setfront3, 10, 1000, 0.04, 4)
 
-      var headwidth1 = this.map(this.setfront3, 10, 1000, 0.015, 1.5)
-      var headwidth2 = this.map(this.setfront3, 10, 1000, 0.015, 1.5)
+      // var headwidth1 = this.map(this.setfront3, 10, 1000, 0.015, 1.5)
+      // var headwidth2 = this.map(this.setfront3, 10, 1000, 0.015, 1.5)
 
 
-      this.arrowHelperX7 = new THREE.ArrowHelper(new THREE.Vector3(0, 0, -1), arrowPos, length1, 0XFFA500, headlength1, headwidth1);
-      this.arrowHelperX7.line = 35;
-      this.arrowHelperY7 = new THREE.ArrowHelper(new THREE.Vector3(0, 1, 0), arrowPos, length2, 0X8F00FF, headlength2, headwidth2);
-      this.scene.add(this.arrowHelperX7);
-      this.scene.add(this.arrowHelperY7);
+      // this.arrowHelperX7 = new THREE.ArrowHelper(new THREE.Vector3(0, 0, -1), arrowPos, length1, 0XFFA500, headlength1, headwidth1);
+      // this.arrowHelperX7.line = 35;
+      // this.arrowHelperY7 = new THREE.ArrowHelper(new THREE.Vector3(0, 1, 0), arrowPos, length2, 0X8F00FF, headlength2, headwidth2);
+      // this.scene.add(this.arrowHelperX7);
+      // this.scene.add(this.arrowHelperY7);
       //text
       //front
       var fontSize = this.map(this.globalScalex, 10, 1000, 0.015, 1.5);
@@ -3993,26 +3993,26 @@ class FormUserPage1 extends Component {
       this.scene.add(this.arrowHelperY);
 
       //Back
-      var arrowPosmapx = this.map(this.globalScalex, 10, 1000, 0.09, 9.5)
-      var arrowPosmapy = this.map(this.globalScaley, 10, 1000, -0.08, -9)
-      var arrowPosmapz = this.map(this.globalScalez, 10, 1000, -0.11, -10.5)
-      var arrowPos = new THREE.Vector3(arrowPosmapx, arrowPosmapy, arrowPosmapz);
+      // var arrowPosmapx = this.map(this.globalScalex, 10, 1000, 0.09, 9.5)
+      // var arrowPosmapy = this.map(this.globalScaley, 10, 1000, -0.08, -9)
+      // var arrowPosmapz = this.map(this.globalScalez, 10, 1000, -0.11, -10.5)
+      // var arrowPos = new THREE.Vector3(arrowPosmapx, arrowPosmapy, arrowPosmapz);
 
-      var length1 = this.map(this.setfront4, 10, 1000, 0.1, 9.5)
-      var length2 = this.map(this.setfront4, 10, 1000, 0.1, 9.5)
+      // var length1 = this.map(this.setfront4, 10, 1000, 0.1, 9.5)
+      // var length2 = this.map(this.setfront4, 10, 1000, 0.1, 9.5)
 
-      var headlength1 = this.map(this.setfront4, 10, 1000, 0.04, 4)
-      var headlength2 = this.map(this.setfront4, 10, 1000, 0.04, 4)
+      // var headlength1 = this.map(this.setfront4, 10, 1000, 0.04, 4)
+      // var headlength2 = this.map(this.setfront4, 10, 1000, 0.04, 4)
 
-      var headwidth1 = this.map(this.setfront4, 10, 1000, 0.015, 1.5)
-      var headwidth2 = this.map(this.setfront4, 10, 1000, 0.015, 1.5)
+      // var headwidth1 = this.map(this.setfront4, 10, 1000, 0.015, 1.5)
+      // var headwidth2 = this.map(this.setfront4, 10, 1000, 0.015, 1.5)
 
 
-      this.arrowHelperX8 = new THREE.ArrowHelper(new THREE.Vector3(-1, 0, 0), arrowPos, length1, 0XFFA500, headlength1, headwidth1);
-      this.arrowHelperX8.line = 35;
-      this.arrowHelperY8 = new THREE.ArrowHelper(new THREE.Vector3(0, 1, 0), arrowPos, length2, 0X8F00FF, headlength2, headwidth2);
-      this.scene.add(this.arrowHelperX8);
-      this.scene.add(this.arrowHelperY8);
+      // this.arrowHelperX8 = new THREE.ArrowHelper(new THREE.Vector3(-1, 0, 0), arrowPos, length1, 0XFFA500, headlength1, headwidth1);
+      // this.arrowHelperX8.line = 35;
+      // this.arrowHelperY8 = new THREE.ArrowHelper(new THREE.Vector3(0, 1, 0), arrowPos, length2, 0X8F00FF, headlength2, headwidth2);
+      // this.scene.add(this.arrowHelperX8);
+      // this.scene.add(this.arrowHelperY8);
 
       //text
       //left
@@ -4939,7 +4939,7 @@ class FormUserPage1 extends Component {
   // };
 
   cubeFor3DLabels = (label) => {
-    if (this.state.labelname.trim() === label.labelname.trim()) {
+    if (this.state.labelname === label.labelname) {
       console.log("Inside cubeForFrontandTop label", label);
       console.log(
         "Inside cubeForFrontandTop label.labelname ",
