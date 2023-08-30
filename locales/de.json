@@ -143,5 +143,8 @@
   "aborted": "Abgebrochen",
   "failed": "Fehlgeschlagen",
   "0simulationspeed,simulationcannotbestarted": "0 Simulationsgeschwindigkeit, Simulation kann nicht gestartet werden",
-  "adminpalletcannotberenamed" : "Admin-Palette kann nicht umbenannt werden"
+  "adminpalletcannotberenamed" : "Admin-Palette kann nicht umbenannt werden",
+  "pleaseSelectAnotherVarientForSchemaA":"Bitte wählen Sie eine andere Variante für SchemaA",
+  "pleaseSelectAnotherVarientForSchemaB":"Bitte wählen Sie eine andere Variante für SchemaB",
+  "pleaseSelectAnotherVarientForSchemaC":"Bitte wählen Sie eine andere Variante für SchemaC"
 }

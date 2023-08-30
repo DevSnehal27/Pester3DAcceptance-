@@ -136,6 +136,7 @@ class PaletteDesignerPage extends Component {
     super(props);
 
     this.state = {
+
       downloadablePDF: true,
       pallet_bool: true,
       rangeValue: 6,
@@ -171,7 +172,8 @@ class PaletteDesignerPage extends Component {
 
       errorWorkingaraeaLengthfor2: false,
       errorHelperForWorkingareaLengthfor2: "",
-      simulationToast :false,
+      simulationToast: false,
+      LayerCreatorToast: false,
 
 
       errorWorkingaraeaoffsetWidthfor2: false,
@@ -2785,6 +2787,8 @@ class PaletteDesignerPage extends Component {
         // setVariantName_SchemaC: this.setVariantName_SchemaC2,
       });
     }
+
+
     // circle Image
     this.ctx.beginPath();
     this.ctx.lineWidth = 2;
@@ -3025,6 +3029,21 @@ class PaletteDesignerPage extends Component {
 
     }
 
+    if ((this.state.panelname == "panel4" || this.state.panelname == "panel5")) {
+     
+      if ((this.cases_Schema_A == 1) && this.currentVarient == 0) {
+        console.log("this.case_Schema:::A",this.CasesSchemaA," varient",this.currentVarient);
+        let { t } = this.props;
+        toast.error(t("pleaseSelectAnotherVarientForSchemaA"), { autoClose: 5000, position: toast.POSITION.TOP_CENTER });
+        this.setState({
+          setVariantName_SchemaA: "",
+        });
+        this.setVariantName_SchemaA = "";
+        this.clearingSchemaFields1("Schema-A");
+
+      }
+
+    }
   }
 
   handlecolorB = () => {
@@ -3129,10 +3148,27 @@ class PaletteDesignerPage extends Component {
       })
 
     }
+    if ((this.state.panelname == "panel4" || this.state.panelname == "panel5")) {
+      console.log("cases_Schema_B ========" + this.cases_Schema_B)
+      if ((this.cases_Schema_B == 1) && this.currentVarient == 0) {
+        console.log("this.case_Schema:::B",this.CasesSchemaB," varient",this.currentVarient);
+        let { t } = this.props;
+        toast.error(t("pleaseSelectAnotherVarientForSchemaB"), { autoClose: 5000, position: toast.POSITION.TOP_CENTER });
+        this.setState({
+          setVariantName_SchemaB: "",
+
+        });
+        this.setVariantName_SchemaB = "";
+        this.clearingSchemaFields1("Schema-B");
+
+      }
+    }
 
   }
 
   handlecolorC = () => {
+
+
 
     // if (this.state.panelname === 'panel5') {
 
@@ -3178,6 +3214,7 @@ class PaletteDesignerPage extends Component {
 
 
     }
+
 
 
     if ((this.state.colorA = false) || (this.state.colorB = false)) {
@@ -3235,6 +3272,20 @@ class PaletteDesignerPage extends Component {
       })
 
     }
+    if ((this.state.panelname == "panel4" || this.state.panelname == "panel5")) {
+      console.log("cases_Schema_C ======== " + this.cases_Schema_C, "this.currentVarient:::", this.currentVarient);
+      if ((this.cases_Schema_C == 1 || this.cases_Schema_C == 0) && this.currentVarient == 0) {
+        console.log("this.case_Schema:::C",this.CasesSchemaC," varient",this.currentVarient);
+        let { t } = this.props;
+        toast.error(t("pleaseSelectAnotherVarientForSchemaC"), { autoClose: 5000, position: toast.POSITION.TOP_CENTER });
+        this.setState({
+          setVariantName_SchemaC: "",
+        });
+        this.setVariantName_SchemaC = "";
+        this.clearingSchemaFields1("Schema-C");
+      }
+    }
+
 
   }
 
@@ -7179,7 +7230,7 @@ class PaletteDesignerPage extends Component {
         console.log("Inside possible frames = 6");
       }
 
-      else if (!this.HWeighted && !this.VWeighted && (this.Case_Length > 200 && this.Case_Length <= 425)){
+      else if (!this.HWeighted && !this.VWeighted && (this.Case_Length > 200 && this.Case_Length <= 425)) {
         Frame_List = ["Frame_1", "Frame_2", "Frame_3", "Frame_4", "Frame_5", "Frame_6", "Frame_7", "Frame_8", "Frame_20", "Frame_21", "Frame_22", "Frame_23", "Frame_24", "Frame_25", "Frame_26", "Frame_27", "Frame_28", "Frame_31", "Frame_32", "Frame_33", "Frame_34", "Frame_35", "Frame_36", "Frame_37"];
       }
 
@@ -7233,7 +7284,7 @@ class PaletteDesignerPage extends Component {
         })
 
       }
-      else if ((this.HWeighted === false) && (this.VWeighted === true)  && !(this.Case_Length > 239 && this.Case_Length <= 425)) {
+      else if ((this.HWeighted === false) && (this.VWeighted === true) && !(this.Case_Length > 239 && this.Case_Length <= 425)) {
 
         let Pal_1 = ["Top-Left", "Top-Right", "TL-to-B", "TR-to-B"]
 
@@ -7246,7 +7297,7 @@ class PaletteDesignerPage extends Component {
         })
 
       }
-      else if ((this.HWeighted === false) && (this.VWeighted === true)  && (this.Case_Length > 239 && this.Case_Length <= 425)) {
+      else if ((this.HWeighted === false) && (this.VWeighted === true) && (this.Case_Length > 239 && this.Case_Length <= 425)) {
 
         let Pal_1 = ["Top-Left", "Top-Right"]
 
@@ -7318,7 +7369,7 @@ class PaletteDesignerPage extends Component {
       else if ((this.HWeighted === true) && (this.VWeighted === false) && (this.Case_Length > 239 && this.Case_Length <= 425)) {
 
         let Pal_1 = ["Top-Left-V2"]
-        let Pal_2 = [ "Top-Left", "Top-Right"]
+        let Pal_2 = ["Top-Left", "Top-Right"]
 
         Pal_1.forEach((value1, index) => {
 
@@ -7405,7 +7456,7 @@ class PaletteDesignerPage extends Component {
           })
         })
 
-      } 
+      }
       else if ((this.HWeighted === true) && (this.VWeighted === false) && (this.Case_Length > 239 && this.Case_Length <= 425)) {
 
         let Pal_1 = ["Top-Left-V2"]
@@ -7422,7 +7473,7 @@ class PaletteDesignerPage extends Component {
           })
         })
 
-      } 
+      }
       else {
 
         let Pal_1 = ["Top-Left-V2", "Bottom-Left-V2"];
@@ -7815,20 +7866,8 @@ class PaletteDesignerPage extends Component {
     //   // console.log("DisplayVariant_Core not Memoized")
     this.currentVarient = DisplayVariant_Core(Data, this.draw, isSim, simulationSchema);
 
-    // }
-
-    // console.log("inside return displayVarient_core abc sorted casePositions...  ", this.currentVarient)
-
-    this.setState({
-      case_data: [...this.casedata],
-    })
-    if (this.state.panelname == "panel5") {
-
-      this.arrowfor_panel5();
-    }
-    // console.log("checking for savePrc calling:...before calling fillCaseRealPositions::a1: ", this.casedataA1)
-    // console.log("checking for savePrc calling:...before calling fillCaseRealPositions::a2: ", this.casedataA2)
-    if (this.state.panelname == "panel5" || this.state.panelname == "panel4") {
+    if ((this.state.panelname === "panel5" || this.state.panelname === "panel4") && this.currentVarient != 0) {
+      console.log("inside the current varient 1")
       // if (this.state.panelname == "panel5" ) {
       // if(this.casedata[0].position === ""){
       let foundNrPos = this.generateOriginFirstCase() // gets first case nrPosition
@@ -7844,6 +7883,21 @@ class PaletteDesignerPage extends Component {
       this.fillCaseRealPositions();
 
     }
+
+    // }
+
+    // console.log("inside return displayVarient_core abc sorted casePositions...  ", this.currentVarient)
+
+    this.setState({
+      case_data: [...this.casedata],
+    })
+    if (this.state.panelname == "panel5") {
+
+      this.arrowfor_panel5();
+    }
+    // console.log("checking for savePrc calling:...before calling fillCaseRealPositions::a1: ", this.casedataA1)
+    // console.log("checking for savePrc calling:...before calling fillCaseRealPositions::a2: ", this.casedataA2)
+
 
     // console.timeEnd("Execution time drawing cases inside display_V")
     return this.currentVarient;
@@ -8751,6 +8805,7 @@ class PaletteDesignerPage extends Component {
   convertBase64ToImage = (base64Data, format, name) => {
     // Remove the data URL prefix if present
     const dataUrlRegex = /^data:image\/(png|jpg|jpeg);base64,/;
+    console.log("Value in Base 64:::", dataUrlRegex);
     const cleanedBase64Data = base64Data.replace(dataUrlRegex, '');
 
     // Convert Base64 to Blob
@@ -8838,6 +8893,7 @@ class PaletteDesignerPage extends Component {
 
       SchemaABC_images.forEach((files, i) => {
         formData.append('files', files.file, `${files.label_Type}`);
+        console.log("Schema ABC ::::", this.SchemaABC_images);
       });
 
       formData.append('Name', case_Type);
@@ -8936,21 +8992,28 @@ class PaletteDesignerPage extends Component {
       console.log("checking pallet type in generate pdf:::", this.state.pallete_Type, " :::type of this.state.pallete_Type::: ", typeof this.state.pallete_Type)
       axios.get(`/threed/getPalImage/${this.palletid}`).then((resp) => {
         // console.log("cehcking images getting from database::::C ", resp.data[0].image_A, resp.data[0].image_B, resp.data[0].image_C);
-
-        if (resp.data[0].image_A != null && resp.data[0].image_A != "") {
+        console.log("resp.dat[0.image_A::", resp.data[0].image_A);
+        if (resp.data[0].image_A != null && resp.data[0].image_A !== "") {
+          console.log("resp.dat[0.image_A::", resp.data[0].image_A);
           const img = JSON.parse(resp.data[0].image_A);
-          imageBlobFile = this.convertBase64ToImage(img.data, 'png', `image${1}`);
-          this.SchemaABC_images.push({ "label_Type": `SchemaA_${img.origin}_${this.state.pallete_Type}`, "file": imageBlobFile, "origin": img.origin })
+          if (img.data != null) {
+            imageBlobFile = this.convertBase64ToImage(img.data, 'png', `image${1}`);
+            this.SchemaABC_images.push({ "label_Type": `SchemaA_${img.origin}_${this.state.pallete_Type}`, "file": imageBlobFile, "origin": img.origin })
+          }
         }
         if (resp.data[0].image_B != null && resp.data[0].image_B != "") {
           const img = JSON.parse(resp.data[0].image_B);
-          imageBlobFile = this.convertBase64ToImage(img.data, 'png', `image${2}`);
-          this.SchemaABC_images.push({ "label_Type": `SchemaB_${img.origin}_${this.state.pallete_Type}`, "file": imageBlobFile, "origin": img.origin })
+          if (img.data != null) {
+            imageBlobFile = this.convertBase64ToImage(img.data, 'png', `image${2}`);
+            this.SchemaABC_images.push({ "label_Type": `SchemaB_${img.origin}_${this.state.pallete_Type}`, "file": imageBlobFile, "origin": img.origin })
+          }
         }
         if (resp.data[0].image_C != null && resp.data[0].image_C != "") {
           const img = JSON.parse(resp.data[0].image_C);
-          imageBlobFile = this.convertBase64ToImage(img.data, 'png', `image${3}`);
-          this.SchemaABC_images.push({ "label_Type": `SchemaC_${img.origin}_${this.state.pallete_Type}`, "file": imageBlobFile, "origin": img.origin })
+          if (img.data != null) {
+            imageBlobFile = this.convertBase64ToImage(img.data, 'png', `image${3}`);
+            this.SchemaABC_images.push({ "label_Type": `SchemaC_${img.origin}_${this.state.pallete_Type}`, "file": imageBlobFile, "origin": img.origin })
+          }
         }
 
         let sceneObjects = this.getAllThreedOBJECT();
@@ -8974,7 +9037,7 @@ class PaletteDesignerPage extends Component {
       toast.error(t(`pleasesetallvaluesandpositionsofcasesinProgramRoutineCreator`), { autoClose: 5000, position: toast.POSITION.TOP_CENTER });
     }
   }
- 
+
   getAllThreedOBJECT = () => {
     let sceneObjects = [];
     let outsideLabelPriority = [...this.listForOutsideLabelPrior];
@@ -8983,7 +9046,7 @@ class PaletteDesignerPage extends Component {
 
 
     const image2d = GetEmptyCase().toDataURL("image/png");
-    console.log("Base64",image2d);
+    console.log("Base64", image2d);
     const image2dPallet = GetCapturePallet().toDataURL("image/png");
     sceneObjects.push({ "label_Type": "Pallet", "file": this.convertBase64ToImage(image2dPallet, 'png', "Pallet") });
     sceneObjects.push({ "label_Type": "emptyCase", "file": this.convertBase64ToImage(image2d, 'png', "emptyCase") });
@@ -13707,7 +13770,7 @@ class PaletteDesignerPage extends Component {
 
                       let newMapValue = this.map(((WorkingAreaYpos) - (this.state.CasesXYfotGreenRectPRC[NrValue - 1].y)), 0, -35.21, 0, 222);
                       prePosXValue = Math.floor(newMapValue);
-                      
+
                       // prePosXValue = 0;
                       x_negCheckbox = false;
                     }
@@ -13788,7 +13851,7 @@ class PaletteDesignerPage extends Component {
                       let { t } = this.props;
 
                       toast.error(t('thecaseoutliniesexceedtheworkingarea'), { autoClose: 3000, position: toast.POSITION.TOP_CENTER });
-                      
+
                       let newMapValue = this.map(((WorkingAreaXpos) - (this.state.CasesXYfotGreenRectPRC[NrValue - 1].x)), 0, 35.21, 0, 222);
                       prePosYValue = Math.floor(newMapValue);
 
@@ -13802,7 +13865,7 @@ class PaletteDesignerPage extends Component {
 
                     if ((xPos + w) > (WorkingAreaXpos + WorkingAreawidth)) {
                       toast.error(t('thecaseoutliniesexceedtheworkingarea'), { autoClose: 3000, position: toast.POSITION.TOP_CENTER });
-                      
+
                       let newMapValue = this.map(((WorkingAreaXpos + WorkingAreawidth) - (this.state.CasesXYfotGreenRectPRC[NrValue - 1].x + w)), 0, 35.19, 0, 222);
                       prePosYValue = Math.floor(newMapValue);
 
@@ -14333,63 +14396,63 @@ class PaletteDesignerPage extends Component {
 
         if ((this.autoGenerateCasePositionsDistance.length - 1) >= index) { // condition to select possible cases only
           if ((this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].y - this.map(this.setpreposx, 0, 1400, 0, 222)) < WorkingAreaYpos) {
-           
+
             let newMapValue = this.map(((WorkingAreaYpos) - (this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].y)), 0, -35.21, 0, 222);
             tempPre_Pos_X = Math.floor(newMapValue);
 
             // tempPre_Pos_X = 0;
-            console.log("............ If condition = 1 tempPre_Pos_X = ",tempPre_Pos_X);
+            console.log("............ If condition = 1 tempPre_Pos_X = ", tempPre_Pos_X);
             //
             temp_offset_X_neg = false;
             // temp_offset_Y_neg = false;
           }
           // console.log("checking this.map(this.setpreposx, 0, 1400, 0, 222)::::: ", ((this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].x + this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].w) + this.map(this.setpreposy, 0, 1400, 0, 222)) > (WorkingAreaXpos + WorkingAreawidth))
           if ((this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].x - this.map(this.setpreposy, 0, 1400, 0, 222)) < WorkingAreaXpos) {
-            
+
             let newMapValue = this.map(((WorkingAreaXpos + WorkingAreawidth) - (this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].x + (this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].w))), 0, 35.21, 0, 222);
             tempPre_Pos_Y = Math.floor(newMapValue);
-            
+
             // tempPre_Pos_Y = 0;
-            console.log("............ If condition = 2 tempPre_Pos_X = ",tempPre_Pos_Y);
+            console.log("............ If condition = 2 tempPre_Pos_X = ", tempPre_Pos_Y);
             //
             // temp_offset_X_neg = false;
             temp_offset_Y_neg = false;
           }
           if (((this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].x + this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].w) + this.map(this.setpreposy, 0, 1400, 0, 222)) > (WorkingAreaXpos + WorkingAreawidth)) {
-            
+
             let newMapValue = this.map(((WorkingAreaXpos + WorkingAreawidth) - (this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].x + (this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].w))), 0, 35.19, 0, 222);
             tempPre_Pos_Y = Math.floor(newMapValue);
-            
+
             // tempPre_Pos_Y = 0;
-            console.log("............ If condition = 3 tempPre_Pos_X = ",tempPre_Pos_Y);
+            console.log("............ If condition = 3 tempPre_Pos_X = ", tempPre_Pos_Y);
             //
             // temp_offset_X_neg = false;
             temp_offset_Y_neg = false;
           }
 
           if (((this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].y + this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].h) + this.map(this.setpreposx, 0, 1400, 0, 222)) > (WorkingAreaYpos + WorkingArealength)) {
-            
+
             let newMapValue = this.map(((WorkingAreaYpos) - (this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].y)), 0, -35.19, 0, 222);
             tempPre_Pos_X = Math.floor(newMapValue);
 
             // tempPre_Pos_X = 0;
-            console.log("............ If condition = 4 tempPre_Pos_X = ",tempPre_Pos_X, "this.setpreposx = ",this.setpreposx);
+            console.log("............ If condition = 4 tempPre_Pos_X = ", tempPre_Pos_X, "this.setpreposx = ", this.setpreposx);
             //
             temp_offset_X_neg = false;
             // temp_offset_Y_neg = false;
           }
-          if(this.setpreposx > 0 && this.setpreposx < this.map(((WorkingAreaYpos) - (this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].y)), 0, -35.19, 0, 222)){
+          if (this.setpreposx > 0 && this.setpreposx < this.map(((WorkingAreaYpos) - (this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].y)), 0, -35.19, 0, 222)) {
 
             tempPre_Pos_X = this.setpreposx;
-            console.log("Inside ABCD IF tempPre_Pos_X ",tempPre_Pos_X);
+            console.log("Inside ABCD IF tempPre_Pos_X ", tempPre_Pos_X);
           }
-          else if(this.setpreposx > 0 && this.setpreposx > this.map(((WorkingAreaYpos) - (this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].y)), 0, -35.19, 0, 222)){
+          else if (this.setpreposx > 0 && this.setpreposx > this.map(((WorkingAreaYpos) - (this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].y)), 0, -35.19, 0, 222)) {
 
             tempPre_Pos_X = Math.floor(this.map(((WorkingAreaYpos) - (this.state.CasesXYfotGreenRectPRC[this.autoGenerateCasePositionsDistance[index][0] - 1].y)), 0, -35.19, 0, 222));
-            console.log("Inside ABCD Else IF tempPre_Pos_X ",tempPre_Pos_X);
+            console.log("Inside ABCD Else IF tempPre_Pos_X ", tempPre_Pos_X);
           }
-          
-          
+
+
         } else {
           tempPre_Pos_X = 0;
           tempPre_Pos_Y = 0;
@@ -15270,7 +15333,7 @@ class PaletteDesignerPage extends Component {
 
                   let newMapValue = this.map(((WorkingAreaXpos) - (this.state.CasesXYfotGreenRectPRC[NrValue - 1].x)), 0, 35.21, 0, 222);
                   offset_Y_neg = Math.floor(newMapValue);
-                  
+
                   // offset_Y_neg = 0;
                   value_Y_True_False = false;
 
@@ -16487,7 +16550,7 @@ class PaletteDesignerPage extends Component {
                           <SwiperSlide key={index} style={{ position: "relative" }}>
                             <p style={{ marginTop: this.state.dyMarginTop_swiperText, textAlign: "center", marginBottom: this.state.dyMarginBottom_swiperText, marginLeft: this.state.dyMarginLeft_swiperText, position: "relative" }}>
                               {this.variantName_array[index]}</p>
-                            <img src={image} alt="" style={{ marginTop: this.state.dyMarginTop_swiper, left: "45px", right: "17px", border:"2px solid", position: "relative" }} />
+                            <img src={image} alt="" style={{ marginTop: this.state.dyMarginTop_swiper, left: "45px", right: "17px", border: "2px solid", position: "relative" }} />
 
                           </SwiperSlide>
 
@@ -16707,7 +16770,7 @@ class PaletteDesignerPage extends Component {
                       abordSimulation={this.state.abordSimulation}
                       Case_Height_Original={this.Case_Height}
                       noOfLayers={this.noOfLayers}
-                      simulationToast = {this.state.simulationToast}
+                      simulationToast={this.state.simulationToast}
                     // callSchema1={this.callSchema1}                    
                     />
                   }
@@ -17216,7 +17279,7 @@ class PaletteDesignerPage extends Component {
                   G_layer_sequence={this.layer_sequence}
                   S_palletid={this.state.palletid}
                   S1_layer_data={this.S1_layer_data}
-
+                  Layer_Creatort_Toast={this.state.LayerCreatorToast}
 
 
                 />

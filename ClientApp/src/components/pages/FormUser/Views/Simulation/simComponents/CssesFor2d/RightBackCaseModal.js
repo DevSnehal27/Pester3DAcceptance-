@@ -109,7 +109,7 @@ const RightBackCaseModal = (props) => {
                 <textGeometry attach="geometry" args={['---->', { font, size: ((props.Case_Width + props.Case_Height) / 10), height: ((props.Case_Width + props.Case_Height + props.Case_Length) / 250) }]} />
                 <meshPhysicalMaterial attach='material' color={'purple'} />
             </mesh>
-            <mesh rotation={[angleRadians(180), -angleRadians(180), -angleRadians(180)]}
+            {/* <mesh rotation={[angleRadians(180), -angleRadians(180), -angleRadians(180)]}
                 position={[-(props.Case_Length / 2), -(props.Case_Height / 2), (props.Case_Width / 2)]} castShadow receiveShadow>
 
                 <textGeometry attach="geometry" args={['---->', { font, size: ((props.Case_Width + props.Case_Height) / 10), height: ((props.Case_Width + props.Case_Height + props.Case_Length) / 250) }]} />
@@ -120,7 +120,7 @@ const RightBackCaseModal = (props) => {
 
                 <textGeometry attach="geometry" args={['---->', { font, size: ((props.Case_Width + props.Case_Height) / 10), height: ((props.Case_Width + props.Case_Height + props.Case_Length) / 250) }]} />
                 <meshPhysicalMaterial attach='material' color={'purple'} />
-            </mesh>
+            </mesh> */}
 
             <mesh ref={rightBack} rotation={[0, Math.PI * 1.5, 0]}
                 position={[0, 0, 0]} castShadow receiveShadow>

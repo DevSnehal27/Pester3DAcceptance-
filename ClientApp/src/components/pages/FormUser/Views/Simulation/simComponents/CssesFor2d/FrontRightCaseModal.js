@@ -97,7 +97,7 @@ const FrontRightCaseModal = (props) => {
 
             <PerspectiveCamera position={[-((props.Case_Height + props.Case_Length + props.Case_Width)), ((props.Case_Height + props.Case_Length + props.Case_Width)), ((props.Case_Height + props.Case_Length + props.Case_Width))]} makeDefault />
             <OrbitControls enableZoom={true} maxPolarAngle={angleRadians(85)} minPolarAngle={angleRadians(20)} />
-            <mesh rotation={[angleRadians(180), -angleRadians(180), -angleRadians(180)]}
+            {/* <mesh rotation={[angleRadians(180), -angleRadians(180), -angleRadians(180)]}
                 position={[-(props.Case_Width / 2), -(props.Case_Height / 2), (props.Case_Length / 2)]} castShadow receiveShadow>
 
                 <textGeometry attach="geometry" args={['---->', { font, size: ((props.Case_Width + props.Case_Height) / 10), height: ((props.Case_Width + props.Case_Height + props.Case_Length) / 250) }]} />
@@ -108,7 +108,7 @@ const FrontRightCaseModal = (props) => {
 
                 <textGeometry attach="geometry" args={['---->', { font, size: ((props.Case_Width + props.Case_Height) / 10), height: ((props.Case_Width + props.Case_Height + props.Case_Length) / 250) }]} />
                 <meshPhysicalMaterial attach='material' color={'purple'} />
-            </mesh>
+            </mesh> */}
             <mesh rotation={[angleRadians(180), -angleRadians(90), -angleRadians(180)]}
                 position={[-(props.Case_Width / 2), -(props.Case_Height / 1.9), -((props.Case_Length / 2))]} castShadow receiveShadow>
 

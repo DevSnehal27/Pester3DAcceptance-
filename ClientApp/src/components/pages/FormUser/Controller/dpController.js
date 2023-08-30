@@ -367,6 +367,17 @@ export const handleChangeForCasesSchemaA = (
     G_cases_Schema_A2 = event.target.value;
     G_CasesSchemaA = G_cases_Schema_A2;
 
+
+    if (event.target.value < 0) {
+        G_cases_Schema_A1 = 0;
+        G_CasesSchemaA = G_cases_Schema_A1;
+        G_cases_Schema_A2 = 0;
+        G_CasesSchemaA = G_cases_Schema_A2;
+    }
+
+    console.log("Enter in dp controller zero condition G_cases_Schema_A1 : " + G_cases_Schema_A1)
+    console.log("Enter in dp controller zero condition G_CasesSchemaA : " + G_CasesSchemaA)
+
     setCases_Schema_A(G_CasesSchemaA);
     G_colorA = '#5eb8b3';
     G_colorB = '';
@@ -408,6 +419,13 @@ export const handleChangeForCasesSchemaB = (
     G_CasesSchemaB = G_cases_Schema_B1;
     G_cases_Schema_B2 = event.target.value;
     G_CasesSchemaB = G_cases_Schema_B2;
+
+    if (event.target.value < 0) {
+        G_cases_Schema_B1 = 0;
+        G_CasesSchemaB = G_cases_Schema_B1;
+        G_cases_Schema_B2 = 0;
+        G_CasesSchemaB = G_cases_Schema_B2;
+    }
 
     setCases_Schema_B(G_CasesSchemaB);
     G_colorA = '';
@@ -510,6 +528,13 @@ export const handleChangeForCasesSchemaC = (
     G_CasesSchemaC = G_cases_Schema_C1;
     G_cases_Schema_C2 = event.target.value;
     G_CasesSchemaC = G_cases_Schema_C2;
+
+    if (event.target.value < 0) {
+        G_cases_Schema_C1 = 0;
+        G_CasesSchemaC = G_cases_Schema_C1;
+        G_cases_Schema_C2 = 0;
+        G_CasesSchemaC = G_cases_Schema_C2;
+    }
 
     setS_cases_Schema_C(G_CasesSchemaC);
     G_colorA = '';

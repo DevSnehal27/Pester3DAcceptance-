@@ -143,5 +143,8 @@
   "aborted": "Aborted",
   "failed": "Failed",
   "0simulationspeed,simulationcannotbestarted": "0 simulation speed, simulation cannot be started",
-  "adminpalletcannotberenamed" : "Admin Pallet can not be renamed"
+  "adminpalletcannotberenamed" : "Admin Pallet can not be renamed",
+  "pleaseSelectAnotherVarientForSchemaA":"Please Select Another Varient For SchemaA",
+  "pleaseSelectAnotherVarientForSchemaB":"Please Select Another Varient For SchemaB",
+  "pleaseSelectAnotherVarientForSchemaC":"Please Select Another Varient For SchemaC"
 }

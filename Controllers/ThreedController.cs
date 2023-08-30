@@ -1481,7 +1481,7 @@ table1.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
                             canvas.EndText();
                             // for image2
                             canvas.BeginText();
-                            canvas.ShowTextAligned(Element.ALIGN_CENTER, "Schema B:", 270, 450, 0);
+                            canvas.ShowTextAligned(Element.ALIGN_CENTER, "Schema B:", 290, 450, 0);
                             canvas.EndText();
                             // string img3 = imageFilePaths[2];
                             canvas.BeginText();
@@ -1514,13 +1514,51 @@ table1.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
                                     buffer = streamReader.ReadBytes((int)files[k].Length);
                                 }
                                     var SchemaAimage = iTextSharp.text.Image.GetInstance(buffer);
-                                    SchemaAimage.ScalePercent(50f);
                                     float logoX2;
                                     float logoY2;
                                     if(filename.Substring(8,3) == "pat"){
-                                        logoX2 = 30f;
+                                          logoX2 = 30f;
                                         logoY2 = 300f;
+                                         if(filename.Substring(12) == "EU 6: 800 x 600"){
+                                            SchemaAimage.ScaleAbsolute(50f, 65f);
+                                              logoX2 = 40f;
+                                              logoY2 = 300f;
+                                           
+                                        }else if(filename.Substring(12) == "US 1: 1219 x 1016 "){
+                                            SchemaAimage.ScaleAbsolute(80f, 98f);
+                                            
+                                        }else if(filename.Substring(12) == "US 2: 1067 x 1067"){
+                                          
+                                            SchemaAimage.ScaleAbsolute(90f, 85f);
+                                        }else if(filename.Substring(12) == "EU 1: 1200 x 800"){
+                                              SchemaAimage.ScaleAbsolute(70f, 95f);
+                                           
+                                        }else if(filename.Substring(12) == "EU 2: 1200 x 1000"){
+                                             SchemaAimage.ScaleAbsolute(78f, 98f);
+                                          
+                                        }else if(filename.Substring(12) == "AU 1: 1165 x 1165"){
+                                            SchemaAimage.ScaleAbsolute(100f, 95f);
+                                              logoX2 = 20f;
+                                              logoY2 = 300f;
+                               
+                                        }else if(filename.Substring(12) == "ASIA 1: 1100 x 1100"){
+                                          SchemaAimage.ScaleAbsolute(90f, 90f);
+                                           
+                                        }else{
+                                         SchemaAimage.ScaleAbsolute(100f, 120f);
+                                        }
+                                      
+                                     
+                                     SchemaAimage.Border = Image.LEFT_BORDER | Image.TOP_BORDER | Image.RIGHT_BORDER | Image.BOTTOM_BORDER;
+                                    SchemaAimage.BorderWidthLeft = 0.1f;
+                                    SchemaAimage.BorderWidthTop = 0.1f;
+                                    SchemaAimage.BorderWidthRight = 0.1f;
+                                    SchemaAimage.BorderWidthBottom = 0.1f;
+                                    SchemaAimage.BorderColor = new iTextSharp.text.BaseColor(System.Drawing.Color.Black);
+                                   
                                     }else{
+                                          SchemaAimage.ScalePercent(50f);
+                                           Console.WriteLine("imageFile::::::::"+filename);
                                         if(filename.Substring(12) == "EU 6: 800 x 600"){
                                             logoX2 = -140f;
                                             logoY2 = 184f;
@@ -1531,7 +1569,7 @@ table1.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
                                             logoX2 = -127f;
                                             logoY2 = 196f;
                                         }else if(filename.Substring(12) == "EU 1: 1200 x 800"){
-                                            logoX2 = -135f;
+                                            logoX2 = -130f;
                                             logoY2 = 202f;
                                         }else if(filename.Substring(12) == "EU 2: 1200 x 1000"){
                                             logoX2 = -130f;
@@ -1549,7 +1587,7 @@ table1.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
                                     }
 
                                     SchemaAimage.SetAbsolutePosition(logoX2, logoY2);
-                                    doc.Add(SchemaAimage);
+                                  doc.Add(SchemaAimage);
 
                             }                                                    
 
@@ -1570,44 +1608,83 @@ table1.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
                                     buffer = streamReader.ReadBytes((int)files[k].Length);
                                 }
                                     var SchemaAimage = iTextSharp.text.Image.GetInstance(buffer);
-                                    SchemaAimage.ScalePercent(50f);
-
+                                    
+                             
                                     float logoX2;
                                     float logoY2;
                                     if(filename.Substring(8,3) == "pat"){
-                                        logoX2 = 230f;
+                                         logoX2 = 250f;
                                         logoY2 = 300f;
+                                        if(filename.Substring(12) == "EU 6: 800 x 600"){
+                                           SchemaAimage.ScaleAbsolute(50f, 65f);
+                                            logoX2 = 265f;
+                                            logoY2 = 300f;
+                                           
+                                        }else if(filename.Substring(12) == "US 1: 1219 x 1016 "){
+                                              SchemaAimage.ScaleAbsolute(80f, 98f);
+                                            
+                                        }else if(filename.Substring(12) == "US 2: 1067 x 1067"){
+                                          SchemaAimage.ScaleAbsolute(90f, 85f);
+                                            
+                                        }else if(filename.Substring(12) == "EU 1: 1200 x 800"){
+                                            SchemaAimage.ScaleAbsolute(70f, 95f);
+                                           
+                                        }else if(filename.Substring(12) == "EU 2: 1200 x 1000"){
+                                            SchemaAimage.ScaleAbsolute(78f, 98f);
+                                            
+                                          
+                                        }else if(filename.Substring(12) == "AU 1: 1165 x 1165"){
+                                            SchemaAimage.ScaleAbsolute(100f, 95f);
+                                           logoX2 = 240f;
+                                           logoY2 = 300f;
+                               
+                                        }else if(filename.Substring(12) == "ASIA 1: 1100 x 1100"){
+                                           SchemaAimage.ScaleAbsolute(90f, 90f);
+                                           
+                                        }else{
+                                         SchemaAimage.ScaleAbsolute(100f, 120f);
+                                        }
+                                       
+                                    SchemaAimage.Border = Image.LEFT_BORDER | Image.TOP_BORDER | Image.RIGHT_BORDER | Image.BOTTOM_BORDER;
+                                    SchemaAimage.BorderWidthLeft = 0.1f;
+                                    SchemaAimage.BorderWidthTop = 0.1f;
+                                    SchemaAimage.BorderWidthRight = 0.1f;
+                                    SchemaAimage.BorderWidthBottom = 0.1f;
+                                    SchemaAimage.BorderColor = new iTextSharp.text.BaseColor(System.Drawing.Color.Black);
+                                    
                                     }else{
+                                       SchemaAimage.ScalePercent(50f);
                                         // logoX2 = 75f;
                                         // logoY2 = 195f;
                                         if(filename.Substring(12) == "EU 6: 800 x 600"){
-                                            logoX2 = 75f;
+                                            logoX2 = 90f;
                                             logoY2 = 184f;
                                         }else if(filename.Substring(12) == "US 1: 1219 x 1016 "){
                                             logoX2 = 90f;
                                             logoY2 = 201f;
                                         }else if(filename.Substring(12) == "US 2: 1067 x 1067"){
-                                            logoX2 = 88f;
+                                            logoX2 = 92f;
                                             logoY2 = 196f;
                                         }else if(filename.Substring(12) == "EU 1: 1200 x 800"){
-                                            logoX2 = 80f;
+                                            logoX2 = 90f;
                                             logoY2 = 202f;
                                         }else if(filename.Substring(12) == "EU 2: 1200 x 1000"){
-                                            logoX2 = 85f;
+                                            logoX2 = 90f;
                                             logoY2 = 202f;
                                         }else if(filename.Substring(12) == "AU 1: 1165 x 1165"){
-                                            logoX2 = 85f;
+                                            logoX2 = 90f;
                                             logoY2 = 200f;
                                         }else if(filename.Substring(12) == "ASIA 1: 1100 x 1100"){
-                                            logoX2 = 90f;
+                                            logoX2 = 93f;
                                             logoY2 = 198f;
                                         }else{
-                                            logoX2 = 30f;
+                                         logoX2 = 30f;
                                         logoY2 = 300f;
                                         }
                                     }
 
                                     SchemaAimage.SetAbsolutePosition(logoX2, logoY2);
+                                 
                                     doc.Add(SchemaAimage);
 
                             }    
@@ -1626,36 +1703,72 @@ table1.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
                                     buffer = streamReader.ReadBytes((int)files[k].Length);
                                 }
                                     var SchemaAimage = iTextSharp.text.Image.GetInstance(buffer);
-                                    SchemaAimage.ScalePercent(50f);
                                     
+                                  
                                     float logoX2;
                                     float logoY2;
                                     if(filename.Substring(8,3) == "pat"){
-                                        logoX2 = 470f;
+                                         logoX2 = 470f;
                                         logoY2 = 300f;
+                                        if(filename.Substring(12) == "EU 6: 800 x 600"){
+                                            SchemaAimage.ScaleAbsolute(50f, 65f);
+                                             logoX2 = 485f;
+                                             logoY2 = 300f;
+                                           
+                                        }else if(filename.Substring(12) == "US 1: 1219 x 1016 "){
+                                              SchemaAimage.ScaleAbsolute(80f, 98f);
+                                            
+                                        }else if(filename.Substring(12) == "US 2: 1067 x 1067"){
+                                            SchemaAimage.ScaleAbsolute(90f, 85f);
+                                        }else if(filename.Substring(12) == "EU 1: 1200 x 800"){
+                                             SchemaAimage.ScaleAbsolute(70f, 95f);
+                                           
+                                        }else if(filename.Substring(12) == "EU 2: 1200 x 1000"){
+                                             SchemaAimage.ScaleAbsolute(78f, 98f);
+                                          
+                                        }else if(filename.Substring(12) == "AU 1: 1165 x 1165"){
+                                            SchemaAimage.ScaleAbsolute(100f, 95f);
+                                            logoX2 = 460f;
+                                            logoY2 = 300f;
+                                        }else if(filename.Substring(12) == "ASIA 1: 1100 x 1100"){
+                                            SchemaAimage.ScaleAbsolute(90f, 90f);
+                                           
+                                        }else{
+                                         SchemaAimage.ScaleAbsolute(100f, 120f);
+                                        }
+                                     
+                                       
+                                    SchemaAimage.Border = Image.LEFT_BORDER | Image.TOP_BORDER | Image.RIGHT_BORDER | Image.BOTTOM_BORDER;
+                                    SchemaAimage.BorderWidthLeft = 0.1f;
+                                    SchemaAimage.BorderWidthTop = 0.1f;
+                                    SchemaAimage.BorderWidthRight = 0.1f;
+                                    SchemaAimage.BorderWidthBottom = 0.1f;
+                                    SchemaAimage.BorderColor = new iTextSharp.text.BaseColor(System.Drawing.Color.Black);
+                                    
                                     }else{
+                                        SchemaAimage.ScalePercent(50f);
                                         // logoX2 = 315f;
                                         // logoY2 = 195f;
                                         if(filename.Substring(12) == "EU 6: 800 x 600"){
-                                            logoX2 = 310f;
+                                            logoX2 = 305f;
                                             logoY2 = 184f;
                                         }else if(filename.Substring(12) == "US 1: 1219 x 1016 "){
-                                            logoX2 = 325f;
+                                            logoX2 = 320f;
                                             logoY2 = 201f;
                                         }else if(filename.Substring(12) == "US 2: 1067 x 1067"){
-                                            logoX2 = 323f;
+                                            logoX2 = 315f;
                                             logoY2 = 196f;
                                         }else if(filename.Substring(12) == "EU 1: 1200 x 800"){
-                                            logoX2 = 323f;
+                                            logoX2 = 315f;
                                             logoY2 = 202f;
                                         }else if(filename.Substring(12) == "EU 2: 1200 x 1000"){
-                                            logoX2 = 320f;
+                                            logoX2 = 315f;
                                             logoY2 = 202f;
                                         }else if(filename.Substring(12) == "AU 1: 1165 x 1165"){
-                                            logoX2 = 320f;
+                                            logoX2 = 315f;
                                             logoY2 = 200f;
                                         }else if(filename.Substring(12) == "ASIA 1: 1100 x 1100"){
-                                            logoX2 = 325f;
+                                            logoX2 = 315f;
                                             logoY2 = 198f;
                                         }else{
                                             logoX2 = 30f;
@@ -1664,6 +1777,7 @@ table1.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
                                     }
 
                                     SchemaAimage.SetAbsolutePosition(logoX2, logoY2);
+                                  
                                     doc.Add(SchemaAimage);
 
                             }  

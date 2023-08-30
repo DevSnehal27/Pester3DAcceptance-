@@ -23006,6 +23006,7 @@ export const Frame_31 = (
   var Weight_distribution_H = Weight_distributionn_H
   var Weight_distribution_V = Weight_distributionn_V
   var label_priority = label_priorityy
+  console.log("Frame 32");
   console.log(
     " Pallet_Len " +
     Pallet_Len +

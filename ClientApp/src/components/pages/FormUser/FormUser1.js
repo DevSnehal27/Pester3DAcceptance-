@@ -4939,7 +4939,7 @@ class FormUserPage1 extends Component {
   // };
 
   cubeFor3DLabels = (label) => {
-    if (this.state.labelname === label.labelname) {
+    if (this.state.labelname.trim() === label.labelname.trim()) {
       console.log("Inside cubeForFrontandTop label", label);
       console.log(
         "Inside cubeForFrontandTop label.labelname ",
@@ -6703,7 +6703,8 @@ class FormUserPage1 extends Component {
       }
       this.setState({
         labels: this.labels,
-        operationCompleted: true
+        operationCompleted: true,
+        labelname:this.globalName
       });
     }
   }

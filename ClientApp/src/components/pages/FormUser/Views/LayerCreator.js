@@ -41,8 +41,8 @@ const LayerCreator = ({
     S_palletid,
     S_layer_data,
     S1_layer_data,
-    S_algo_loaded
-
+    S_algo_loaded,
+    Layer_Creatort_Toast
 
 
 
@@ -50,6 +50,7 @@ const LayerCreator = ({
     return (
 
         <Grid item xs={12}style={GridTopStyle} >
+            {console.log("Layer Creator Toast:::",Layer_Creatort_Toast)}
             <ExpansionPanel style={ExpansionPanelDetailsStyle}
                 expanded={expanded_panel === 'panel4'}
                 onChange={S_algo_loaded == true ? handleChangepanel('panel4') : handleChangepanel_forToast('panel4')}
